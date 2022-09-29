@@ -13,7 +13,7 @@
 .button {
   border: none;
   border-radius: var(--border);
-  font-weight: var(--font-weight);
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,4 +22,7 @@
   transition: background-color 0.1s ease 0s;
   text-decoration: none;
   width: 300px;
+}
+body{
+  font-family: Helvetica Neue,HelveticaNeue,Helvetica,TeXGyreHeros,FreeSans,Nimbus Sans L,Liberation Sans,Arial,sans-serif!important;
 }
