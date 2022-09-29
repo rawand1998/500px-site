@@ -1,11 +1,25 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
-:root{
-  --text-size : 16px;
-  --black-color:#000;
-  --border:25px;
-  --font-weight:400
-
+:root {
+  --text-size: 16px;
+  --black-color: rgb(34, 34, 34);
+  --border: 25px;
+  --font-weight: bold;
+  --font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial,
+    sansserif;
+}
+.button {
+  border: none;
+  border-radius: var(--border);
+  font-weight: var(--font-weight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  height: 56px;
+  transition: background-color 0.1s ease 0s;
+  text-decoration: none;
+  width: 300px;
 }

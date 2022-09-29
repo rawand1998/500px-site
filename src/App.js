@@ -1,12 +1,14 @@
-import './App.css';
-import NavBar from './Component/common/Navbar/NavBar';
+import "./App.css";
+import NavBar from "./Component/common/Navbar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Component/header/Header";
 function App() {
   return (
     <BrowserRouter>
-    <NavBar />
-    <Routes>
-      {/* <Route path="/" element={<Home />} />
+      <NavBar />
+      <Header />
+      <Routes>
+        {/* <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="clients" element={<Clients />} />
       <Route path="enterprise" element={<Enterprise />} />
@@ -14,9 +16,8 @@ function App() {
       <Route path="register" element={<Register />} />
       <Route path="findWork" element={<FindWork />} />
       <Route path="*" element={<Error />} /> */}
-   
-    </Routes>
-  </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
