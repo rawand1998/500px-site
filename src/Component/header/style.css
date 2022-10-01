@@ -11,7 +11,7 @@
 .header_content {
   color: #fff;
   line-height: 52px;
-  padding-left: 8%;
+  padding-left: 6%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 
 }
 .header_conatiner h1 {
-  font-size: 48px;
+  font-size: 60px;
   line-height: 52px;
   font-weight: var(--font-weight);
   color: rgb(255, 255, 255);
