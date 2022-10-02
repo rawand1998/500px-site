@@ -3,7 +3,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  height: 188px;
+  height: 250px;
   padding-top: 15px;
 }
 .img_conatiner h3 {
@@ -17,7 +17,7 @@
 }
 .img_conatiner span {
   font-size: 20px;
-width: 1000px;
+/* width: 1000px; */
   color: var(--black-color);
   text-align: center;
 }

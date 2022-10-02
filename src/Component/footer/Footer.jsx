@@ -13,7 +13,7 @@ function Footer() {
       <div className="list_footer">
         <div className="footer_menu">
           <div className="list_content">
-            <span>Company</span>
+            <span className="span">Company</span>
             <ul>
               <li>Newroom</li>
               <li>About us</li>
@@ -21,7 +21,7 @@ function Footer() {
             </ul>
           </div>
           <div className="list_content">
-            <span> Community</span>
+            <span className="span"> Community</span>
             <ul>
               <li>Editors' Choice</li>
               <li>Resource Hub</li>
@@ -31,7 +31,7 @@ function Footer() {
             </ul>
           </div>
           <div className="list_content">
-            <span>Licensing</span>
+            <span className="span">Licensing</span>
             <ul>
               <li> About Licensing</li>
               <li>Submission requirements</li>
@@ -41,7 +41,7 @@ function Footer() {
           </div>
 
           <div className="list_content">
-            <span>Company</span>
+            <span className="span">Company</span>
             <ul>
               <li>
                 <FaFacebook />
@@ -62,8 +62,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="scoicl_footer list_content">
-          <span>Company</span>
+        <div className="scoicl_footer">
+          <span className="span">Company</span>
           <div className="social_btns">
             <a>
               <img src={googlePaly} alt="" />
@@ -76,7 +76,7 @@ function Footer() {
       </div>
       <div className="footer">
         <div className="logo_footer">
-        <h4>© 500px</h4>
+          <h4>© 500px</h4>
         </div>
         <div className="footer_menu_terms">
           <a href="">Terms</a>

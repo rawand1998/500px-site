@@ -1,7 +1,6 @@
 .table_conatiner{
     word-break: break-word;
     max-width: 100%;
-    /* -webkit-box-pack: center; */
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
@@ -78,4 +77,10 @@ font-weight: 100;
     height: 16px;
     width: 16px;
     padding: 15px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1440px) {
+    .table_section{
+        width: 100%;
+    }
 }
