@@ -67,7 +67,8 @@
 }
 .sign_up_para span {
   color: rgb(109, 115, 120);
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 100;
 }
 .sign_up_para span a {
   color: rgb(8, 112, 209);
@@ -78,4 +79,29 @@
 }
 .forget_pass:hover {
   text-decoration: underline;
+}
+.sign_up_para_register
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+}
+.sign_up_para_register span{
+  color: var(--black-color);
+  font-size: 18px;
+  font-weight: 100;
+}
+.register_form span:nth-child(1){
+  font-weight: 100;
+  font-size: 30px;
+}
+.register_form span:nth-child(2){
+  font-weight: 100;
+  font-size: 20px;
+  color: rgb(109, 115, 120);
+}
+.auths_link{
+  color: rgb(8, 112, 209)
 }

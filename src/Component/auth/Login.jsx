@@ -50,7 +50,7 @@ function Login() {
           />
           </div>
           <div className="sign_up_para">
-            <span>Don`t have a account ?<Link>Sign  up</Link></span>
+            <span>Don`t have a account ?<Link className="auths_link" to="/register">Sign  up</Link></span>
           </div>
         </form>
       </div>

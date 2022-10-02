@@ -109,7 +109,7 @@ function NavBar() {
               <Link className="auth login" to="/login">
                 Login
               </Link>
-              <Link className="auth register">Sign up</Link>
+              <Link className="auth register" to="/register">Sign up</Link>
             </div>
           </div>
         </div>
