@@ -9,6 +9,7 @@
   --font-weight: bold;
   --font-family: "Helvetica Neue", HelveticaNeue, Helvetica, FreeSans, Arial,
     sansserif;
+    
 }
 .button {
   border: none;
@@ -27,4 +28,7 @@
 }
 body{
   font-family: Helvetica Neue,HelveticaNeue,Helvetica,TeXGyreHeros,FreeSans,Nimbus Sans L,Liberation Sans,Arial,sans-serif!important;
+}
+a:hover{
+  color: #1890ff;
 }

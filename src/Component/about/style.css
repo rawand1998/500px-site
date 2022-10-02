@@ -5,6 +5,7 @@
   height: 450px;
   justify-content: space-between;
   padding-top: 50px;
+ 
 }
 .about_content {
   display: grid;
@@ -37,11 +38,16 @@
   line-height: 30px;
 }
 @media screen and (min-width: 600px) and (max-width: 1440px) {
+  .about_conatiner{
+    height: 1500px;
+    justify-content: space-evenly;
+  }
   .about_content {
     display: grid;
     grid-template-columns: repeat(1, 100%);
     gap: 20px;
     text-align: center;
+   
   }
   .about_sections {
     align-items: center;

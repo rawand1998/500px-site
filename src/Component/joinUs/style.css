@@ -1,0 +1,23 @@
+.join_contanier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  background-color: rgb(69, 69, 124);
+  color: #fff;
+}
+.join_contanier span:nth-child(1) {
+  font-weight: var(--font-weight);
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.join_contanier span:nth-child(2) {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.login_join {
+  background-color: #fff;
+  color: var(--black-color);
+}
