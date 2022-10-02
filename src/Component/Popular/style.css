@@ -64,9 +64,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1330px;
+    /*  */
     margin: 0px auto;
-    padding-top: 32px;
+    /* padding-top: 32px; */
+    background-color: rgb(247, 248, 250);
+    width: 100%;
 }
 .image_section_conatiner_pop{
     flex: grid;
@@ -75,9 +77,11 @@
     gap: 40px;
     margin-top: 15px;
     width: 100%;
+    /* background-color: #ff0; */
+    max-width: 1440px;
+
 }
 .image_section_conatiner_single_pop{
-    background-color: #ff0;
     height: 500px;
 }
 .image_section_conatiner_single_pop img{

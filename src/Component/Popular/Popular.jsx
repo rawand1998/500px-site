@@ -15,7 +15,7 @@ function Popular() {
   useEffect(() => {
     axios
       .get(
-        "https://api.unsplash.com/search/photos?query=natural&client_id=qp1xazQhIzra13wFLMNGz3ayhyy-ouNonVyzwcbtnLY"
+        "https://api.unsplash.com/search/photos?query=london&client_id=qp1xazQhIzra13wFLMNGz3ayhyy-ouNonVyzwcbtnLY"
       )
       .then((response) => {
         setResult(response.data.results);
