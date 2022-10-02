@@ -8,10 +8,10 @@
   text-align: center;
   color: var(--black-color);
   font-size: 24px;
-  margin :15px
+  margin: 15px;
 }
-.auth {
-  /* background-color: rgb(247, 248, 250); */
+.authenticon {
+  background-color: rgb(247, 248, 250);
 }
 .form {
   word-break: break-word;
@@ -54,7 +54,6 @@
 .btns_auth {
   margin-top: 25px;
   width: 100%;
-
 }
 .sign_up_para {
   text-align: center;
@@ -80,28 +79,27 @@
 .forget_pass:hover {
   text-decoration: underline;
 }
-.sign_up_para_register
-{
+.sign_up_para_register {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 25px;
 }
-.sign_up_para_register span{
+.sign_up_para_register span {
   color: var(--black-color);
   font-size: 18px;
   font-weight: 100;
 }
-.register_form span:nth-child(1){
+.register_form span:nth-child(1) {
   font-weight: 100;
   font-size: 30px;
 }
-.register_form span:nth-child(2){
+.register_form span:nth-child(2) {
   font-weight: 100;
   font-size: 20px;
   color: rgb(109, 115, 120);
 }
-.auths_link{
-  color: rgb(8, 112, 209)
+.auths_link {
+  color: rgb(8, 112, 209);
 }
