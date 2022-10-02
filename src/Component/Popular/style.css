@@ -68,4 +68,8 @@
   .right_list_popular ul li {
     padding-right: 15px;
   }
+  .pop_title{
+    align-items: center;
+    justify-content: center;
+  }
 }
