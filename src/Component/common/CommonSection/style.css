@@ -4,7 +4,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 500px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .common_container svg{
     height: 64px;
@@ -31,4 +34,11 @@
     font-size: 36px;
     color: rgb(255, 255, 255);
     
+}
+.left_span{
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    color: #fff;
+    padding-bottom: 5px;
 }

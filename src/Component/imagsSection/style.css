@@ -1,0 +1,31 @@
+.image_section_conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1330px;
+  margin: 0px auto;
+  padding-top: 32px;
+}
+.image_section_conatiner_single {
+  margin: 0px 8px;
+  position: relative;
+}
+.image_section_conatiner_single img {
+  margin-bottom: 15px;
+}
+.title_img {
+  display: none;
+}
+.image_section_conatiner_single:hover .title_img {
+  display: block;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 20px;
+  height: 32px;
+  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  padding: 5px 0px;
+}
