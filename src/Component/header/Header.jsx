@@ -16,7 +16,7 @@ function Header() {
           world. We're not guided by fads—just great <br />
           photography.
         </span>
-        <Link className="button btn">Sign up</Link>
+        <Link className="button btn" to="/register">Sign up</Link>
       </div>
       <div className="white_bg">
         <svg

@@ -1,7 +1,7 @@
 .button_auth_common {
   border: none;
   display: inline-flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-weight: var(--font-weight);
   border-radius: 28px;
@@ -11,4 +11,9 @@
   margin-top: 20px;
   font-size: 20px;
   width: 100%;
+}
+.button_auth_common span {
+  width: 87%;
+  text-align: center;
+  font-weight: 100;
 }
