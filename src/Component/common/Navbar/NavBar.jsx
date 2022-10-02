@@ -78,10 +78,7 @@ function NavBar() {
                 <Link to="/">Discover</Link>
               </li>
               <li>
-                <Link to="/clients">
-                  Licensing
-              
-                </Link>
+                <Link to="/clients">Licensing</Link>
               </li>
               {/* <SelectInput />  */}
               <li>
@@ -109,7 +106,9 @@ function NavBar() {
           <div className="right_navbar">
             <input placeholder="Search 500px" className="search_input" />
             <div className="auth_btn">
-              <Link className="auth login">Login</Link>
+              <Link className="auth login" to="/login">
+                Login
+              </Link>
               <Link className="auth register">Sign up</Link>
             </div>
           </div>
