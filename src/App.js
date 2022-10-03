@@ -5,6 +5,7 @@ import Header from "./Component/header/Header";
 import Home from "./Component/Home/Home"
 import Login from "./Component/auth/Login";
 import Register from "./Component/auth/Register";
+import Popular from "./Component/Popular/Popular";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="popular" element={<Popular/>} />
         {/* />
       {/* <Route path="about" element={<About />} />
       <Route path="clients" element={<Clients />} />

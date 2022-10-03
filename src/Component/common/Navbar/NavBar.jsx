@@ -5,6 +5,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaMixer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 function NavBar() {
   const [widthScreen, setWidthScreen] = useState(0);
   const [isSticky, setSticky] = useState(false);
@@ -77,7 +78,7 @@ const homePage = ()=>{
           <div className="bowl_menu">
             <ul className="navbar_menu">
               <li>
-                <Link to="/">Discover</Link>
+                <Link to="/popular">Discover</Link>
               </li>
               <li>
                 <Link to="/clients">Licensing</Link>
@@ -106,7 +107,11 @@ const homePage = ()=>{
             </ul>
           </div>
           <div className="right_navbar">
+            <div className="search_input_icon">
+            <FaSearch className="icon_search_nav"/>
             <input placeholder="Search 500px" className="search_input" />
+            </div>
+          
             <div className="auth_btn">
               <Link className="auth login" to="/login">
                 Login
