@@ -1,58 +1,64 @@
-
-.profile_container{
-    padding-top: 8%;
-}
-.avator_profile{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-}
-.profile_pro_icon{
-    /* background-color: #f00; */
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-.profile_name{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-    width: 80%;
+.profile_container {
+  padding-top: 8%;
+  height: 1000px;
 }
 .avator_profile {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.avator_profile a{
-    background-color: var(--black-color);
-    color: #fff;
-    border-radius: 25px;
-    padding: 3px 9px;
+.profile_pro_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 80%;
+}
+.avator_profile {
+  display: flex;
+  flex-direction: column;
+}
+.avator_profile a {
+  background-color: var(--black-color);
+  color: #fff;
+  border-radius: 25px;
+  padding: 3px 9px;
+}
+.profile_name span {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  text-transform: none;
+  color: var(--black-color);
+}
 
+.profile_icon {
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  width: 1330px;
 }
-.profile_name span{
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: bold;
-    text-transform: none;
-    color: var(--black-color);
+.profile_icon svg {
+  padding: 15px;
 }
-
-.profile_icon
-{
-    align-items: flex-end;
-    justify-content: flex-end;
-    display: flex;
-    width: 1330px;
+.profile_icon svg:hover {
+  background-color: #ddd;
+  border-radius: 50%;
 }
-.profile_icon svg{
-    padding: 15px;
-}
-.profile_icon svg:hover{
-    background-color: #ddd;
-    border-radius: 50%;
-
+.profile_menu_content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ddd;
+  height: 700px;
+ padding: 50px 0px;
 }
