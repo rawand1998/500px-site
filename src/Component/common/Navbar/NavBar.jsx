@@ -78,7 +78,7 @@ const homePage = ()=>{
           <div className="bowl_menu">
             <ul className="navbar_menu">
               <li>
-                <Link to="/">Discover</Link>
+                <Link to="/popular">Discover</Link>
               </li>
               <li>
                 <Link to="/clients">Licensing</Link>
