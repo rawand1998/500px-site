@@ -7,6 +7,8 @@ import { FaMixer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import ProfileNav from "./ProfileNav";
+import googlePaly from "../../../images/google play.jpg";
+import appStore from "../../../images/app store.png";
 function NavBar() {
   const [widthScreen, setWidthScreen] = useState(0);
   const [isSticky, setSticky] = useState(false);
@@ -70,7 +72,7 @@ function NavBar() {
           </div>
         </div>
       ) : (
-        <div className="navbar_conatiner">
+        <div className="navbar_conatiner mode">
           <div className="right_side">
             <div className="logo" onClick={homePage}>
               <svg viewBox="0 0 80 20">
@@ -81,21 +83,35 @@ function NavBar() {
             <div className="bowl_menu">
               <ul className="navbar_menu">
                 <li>
-                  <Link to="/popular">Discover <svg height="20" width="21" viewBox="0 0 21 20" fill="#6d7378">
-                    <path d="M4.57926 7.03499C4.57933 6.73524 4.75993 6.46502 5.03687 6.35032C5.31381 6.23562 5.63258 6.299 5.84457 6.51093L11.2505 11.9168L16.6564 6.51093C16.9472 6.23002 17.4096 6.23404 17.6955 6.51996C17.9814 6.80589 17.9854 7.26821 17.7045 7.55906L11.7745 13.489C11.4851 13.7784 11.0159 13.7784 10.7264 13.489L4.79645 7.55906C4.65743 7.42008 4.57931 7.23157 4.57926 7.03499Z"></path>
-                  </svg></Link>
-                 
-                </li>
-                <li>
-                  <Link to="/clients">Licensing
-                  <svg height="20" width="21" viewBox="0 0 21 20" fill="#6d7378">
-                    <path d="M4.57926 7.03499C4.57933 6.73524 4.75993 6.46502 5.03687 6.35032C5.31381 6.23562 5.63258 6.299 5.84457 6.51093L11.2505 11.9168L16.6564 6.51093C16.9472 6.23002 17.4096 6.23404 17.6955 6.51996C17.9814 6.80589 17.9854 7.26821 17.7045 7.55906L11.7745 13.489C11.4851 13.7784 11.0159 13.7784 10.7264 13.489L4.79645 7.55906C4.65743 7.42008 4.57931 7.23157 4.57926 7.03499Z"></path>
-                  </svg>
+                  <Link to="/popular">
+                    Discover{" "}
+                    <svg
+                      height="20"
+                      width="21"
+                      viewBox="0 0 21 20"
+                      fill="#6d7378"
+                    >
+                      <path d="M4.57926 7.03499C4.57933 6.73524 4.75993 6.46502 5.03687 6.35032C5.31381 6.23562 5.63258 6.299 5.84457 6.51093L11.2505 11.9168L16.6564 6.51093C16.9472 6.23002 17.4096 6.23404 17.6955 6.51996C17.9814 6.80589 17.9854 7.26821 17.7045 7.55906L11.7745 13.489C11.4851 13.7784 11.0159 13.7784 10.7264 13.489L4.79645 7.55906C4.65743 7.42008 4.57931 7.23157 4.57926 7.03499Z"></path>
+                    </svg>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about">NFT VAULT  <span className="beta">BETA</span></Link>
-                
+                  <Link to="/clients">
+                    Licensing
+                    <svg
+                      height="20"
+                      width="21"
+                      viewBox="0 0 21 20"
+                      fill="#6d7378"
+                    >
+                      <path d="M4.57926 7.03499C4.57933 6.73524 4.75993 6.46502 5.03687 6.35032C5.31381 6.23562 5.63258 6.299 5.84457 6.51093L11.2505 11.9168L16.6564 6.51093C16.9472 6.23002 17.4096 6.23404 17.6955 6.51996C17.9814 6.80589 17.9854 7.26821 17.7045 7.55906L11.7745 13.489C11.4851 13.7784 11.0159 13.7784 10.7264 13.489L4.79645 7.55906C4.65743 7.42008 4.57931 7.23157 4.57926 7.03499Z"></path>
+                    </svg>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about">
+                    NFT VAULT <span className="beta">BETA</span>
+                  </Link>
                 </li>
 
                 <li>
@@ -117,12 +133,11 @@ function NavBar() {
             </div>
           </div>
           <div className="right_navbar">
-          <div className="search_input_icon">
+            <div className="search_input_icon">
               <FaSearch className="icon_search_nav" />
               <input placeholder="Search 500px" className="search_input" />
             </div>
             {/* <ProfileNav/> */}
-       
 
             <div className="auth_btn">
               <Link className="auth login" to="/login">
@@ -135,6 +150,71 @@ function NavBar() {
           </div>
         </div>
       )}
+      {visible ? (
+        <div className="right_side_mod">
+          <div className="bowl_menu_mod">
+            <ul className="navbar_menu_mode">
+              <li>
+                <Link to="/popular">Discover </Link>
+              </li>
+              <li>
+                <Link to="/clients">Licensing</Link>
+              </li>
+              <li>
+                <Link to="/about">
+                  NFT VAULT <span className="beta">BETA</span>
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/enterprise">Memberships</Link>
+              </li>
+
+              <li>
+                <Link className="btns_nav_ discover" to="/register">
+                  Quests
+                </Link>
+              </li>
+
+              <li>
+                <Link className="btns_nav_ discover" to="/register">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link className="btns_nav_ discover" to="/register">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link className="btns_nav_ discover" to="/register">
+                  Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="width_footer">
+            <div className="social_btns">
+              <a>
+                <img src={googlePaly} alt="" />
+              </a>
+              <a>
+                <img src={appStore} alt="" />
+              </a>
+            </div>
+            <div className="footer ">
+              <div className="logo_footer">
+                <h4>© 500px</h4>
+              </div>
+              <div className="footer_menu_terms">
+                <a href="">Terms</a>
+                <a href="">Privacy</a>
+                <a href="">Support</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </>
   );
 }
