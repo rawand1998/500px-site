@@ -35,7 +35,15 @@ function Home() {
       />
       <ImageCommon
         title="Designed and built for photographers"
-        descrition="Create your own high-quality website in minutes. Portfolios allows you to share your work externally so you can build your own brand and market yourself as a professional photographer."
+        descrition={
+          <>
+            Create your own high-quality website in minutes. Portfolios allows
+            <br />
+            you to share your work externally so you can build your own brand
+            <br />
+            and market yourself as a professional photographer."
+          </>
+        }
         btn="Get Started"
       />
       <div className="img_home">
@@ -50,7 +58,15 @@ function Home() {
       />
       <ImageCommon
         title="Discover something new"
-        descrition="Browse videos, articles, workshops, and presets from 500px users to discover new areas of photography and grow your skills. Become a Pro member to list your Resources in the Hub."
+        descrition={
+          <>
+            Browse videos, articles, workshops, and presets from 500px users to
+            <br />
+            discover new areas of photography and grow your skills. Become a Pro
+            <br />
+            member to list your Resources in the Hub."
+          </>
+        }
         btn="View Resource Hub"
       />
       <Table />
