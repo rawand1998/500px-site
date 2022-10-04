@@ -1,7 +1,7 @@
 .navbar_conatiner {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 64px;
+  padding-right: 64px;
   justify-content: space-between;
   align-items: center;
   height: 90px;
@@ -9,9 +9,8 @@
 .bowl_menu {
   display: flex;
   align-items: center;
-
-  width: 80%;
-  padding-left: 5%;
+  /* width: 900px; */
+  /* padding-top: 5px; */
 }
 .navbar_menu {
   display: flex;
@@ -22,7 +21,10 @@
   padding: 0 15px;
   color: var(--black-color);
   font-size: 20px;
+  display: flex;
+  align-items: center;
 }
+
 .navbar_menu li a:hover {
   color: #7fc1ff;
 }
@@ -68,10 +70,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 15px;
+  height: 80px;
 }
 .points {
   font-weight: var(--border);
+}
+.right_side {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  padding-left: 15px;
 }
 .logo svg {
   width: 100px;
@@ -85,9 +93,10 @@
   border: none;
   border-radius: 4px;
   background-color: #7fc1ff;
-  padding: 5px;
+  padding: 3px;
   color: var(--black-color);
   cursor: pointer;
+  font-size: 14px;
 }
 .search_input_icon {
   position: relative;
@@ -100,4 +109,60 @@
   height: 20px;
   width: 20px;
   color: #3a3a3a;
+}
+/* profile navbar */
+.profile_nav_profile_auth {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+}
+.profile_nav_profile_auth img {
+  width: 30px;
+  height: 30px;
+}
+
+.profile_btns {
+  border: var(--border);
+  display: flex;
+  border: 2px solid var(--black-color);
+  border-radius: 50px;
+  align-items: center;
+  padding: 10px 25px;
+  width: 50%;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.bowl_menu_mod {
+  padding-top: 25px;
+  width: 100%;
+}
+.navbar_menu_mode {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  font-size: 24px;
+  color: #fff;
+  line-height: 48px;
+  padding-left: 15px;
+}
+.navbar_menu_mode li a:hover {
+}
+.right_side_mod {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  height: 700px;
+  /* position: fixed; */
+}
+.width_footer {
+  margin-top: -50%;
+}
+.width_footer .social_btns {
+  padding-left: 10px;
+}
+.menu_width .logo {
+  padding-left: 20px;
 }
