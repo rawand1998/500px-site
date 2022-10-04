@@ -18,8 +18,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 70px;
   width: 80%;
+} 
+.profile_name span:nth-child(2){
+    color: var(--black-color);
+    font-weight: var(  --font-weight);
+    font-size: 20px;
 }
 .avator_profile {
   display: flex;
@@ -43,7 +48,8 @@
   align-items: flex-end;
   justify-content: flex-end;
   display: flex;
-  width: 1330px;
+  width: 95%;
+
 }
 .profile_icon svg {
   padding: 15px;
@@ -52,13 +58,23 @@
   background-color: #ddd;
   border-radius: 50%;
 }
+.profile_menu{
+padding-top: 25px;
+}
+
 .profile_menu_content {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background-color: #ddd;
+  background-color:  rgb(247, 248, 250);
   height: 700px;
  padding: 50px 0px;
+}
+
+.resume{
+    color: rgb(127, 193, 255);
+font-weight: var(--font-weight)
+;
 }

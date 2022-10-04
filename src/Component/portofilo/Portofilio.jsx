@@ -40,6 +40,7 @@ function Portofilio() {
       <div className="profile_pro_icon">
         <div className="profile_name">
           <span>Rawand Jaradh</span>
+          <span>1 followrs</span>
         </div>
       </div>
       <div className="profile_menu">
@@ -62,8 +63,14 @@ function Portofilio() {
             d="M40 15.8333C40 15.8333 40 15.6667 40 15.8333C40 15.5 40 15.3333 39.8333 15.1667L35.1667 5.66667C35.1667 5.5 35 5.33333 34.8333 5.33333C34.8333 5.33333 34.8333 5.33333 34.6667 5.33333C34.5 5 34.3333 5 34.1667 5C34.1667 5 34.1667 5 34 5H5.83333C5.83333 5 5.83333 5 5.66667 5C5.66667 5 5.5 5 5.33333 5.16667C5.33333 5.16667 5.33333 5.16667 5.16667 5.16667C5 5.33333 5 5.5 4.83333 5.66667L0.166667 15.1667C0 15.3333 0 15.5 0 15.6667C0 15.6667 0 15.6667 0 15.8333V16C0 16.1667 0.166667 16.3333 0.166667 16.5L19 38C19 38 19 38 19.1667 38.1667C19.1667 38.1667 19.1667 38.1667 19.3333 38.1667C19.3333 38.1667 19.5 38.1667 19.5 38.3333C19.6667 38.3333 19.8333 38.3333 19.8333 38.3333H20.1667C20.1667 38.3333 20.3333 38.3333 20.3333 38.1667C20.3333 38.1667 20.3333 38.1667 20.5 38.1667C20.5 38.1667 20.6667 38.1667 20.6667 38L39.6667 16.5C39.8333 16.3333 39.8333 16.1667 40 15.8333ZM6 8.5L10.3333 14.5H3L6 8.5ZM25.6667 16.8333L20 33.5L14.3333 16.8333H25.6667ZM15.1667 14.5L20 8.16667L24.8333 14.5H15.1667ZM22.3333 7.33333H31.6667L27.1667 13.6667L22.3333 7.33333ZM12.6667 13.6667L8.16667 7.33333H17.5L12.6667 13.6667ZM11.8333 16.8333L17 31.8333L3.83333 16.8333H11.8333ZM28.1667 16.8333H36.1667L23 31.8333L28.1667 16.8333ZM29.6667 14.5L34 8.5L37 14.5H29.6667Z"
             title="You’re on a free Pro membership trial"
             para="  You have unlimited uploads for 13 more days"
-            btn1={<button className="btn_photo button_profile">Upload Photo</button>}
-            btn2={<button className="btn_photos button_profile">Learn about membership</button>}
+            btn1={
+              <button className="btn_photo button_profile">Upload Photo</button>
+            }
+            btn2={
+              <button className="btn_photos button_profile">
+                Learn about membership
+              </button>
+            }
           />
         ) : tab === "Galleries" ? (
           <CardGalleries
@@ -94,7 +101,7 @@ function Portofilio() {
             para={
               <>
                 Join Groups to meet like-minded 500px members and participate in
-                lively discussions around creative topics.
+                lively <br/>discussions around creative topics.
               </>
             }
             btn="Discover Group"
@@ -118,12 +125,28 @@ function Portofilio() {
           <CardPhoto
             d="M40 15.8333C40 15.8333 40 15.6667 40 15.8333C40 15.5 40 15.3333 39.8333 15.1667L35.1667 5.66667C35.1667 5.5 35 5.33333 34.8333 5.33333C34.8333 5.33333 34.8333 5.33333 34.6667 5.33333C34.5 5 34.3333 5 34.1667 5C34.1667 5 34.1667 5 34 5H5.83333C5.83333 5 5.83333 5 5.66667 5C5.66667 5 5.5 5 5.33333 5.16667C5.33333 5.16667 5.33333 5.16667 5.16667 5.16667C5 5.33333 5 5.5 4.83333 5.66667L0.166667 15.1667C0 15.3333 0 15.5 0 15.6667C0 15.6667 0 15.6667 0 15.8333V16C0 16.1667 0.166667 16.3333 0.166667 16.5L19 38C19 38 19 38 19.1667 38.1667C19.1667 38.1667 19.1667 38.1667 19.3333 38.1667C19.3333 38.1667 19.5 38.1667 19.5 38.3333C19.6667 38.3333 19.8333 38.3333 19.8333 38.3333H20.1667C20.1667 38.3333 20.3333 38.3333 20.3333 38.1667C20.3333 38.1667 20.3333 38.1667 20.5 38.1667C20.5 38.1667 20.6667 38.1667 20.6667 38L39.6667 16.5C39.8333 16.3333 39.8333 16.1667 40 15.8333ZM6 8.5L10.3333 14.5H3L6 8.5ZM25.6667 16.8333L20 33.5L14.3333 16.8333H25.6667ZM15.1667 14.5L20 8.16667L24.8333 14.5H15.1667ZM22.3333 7.33333H31.6667L27.1667 13.6667L22.3333 7.33333ZM12.6667 13.6667L8.16667 7.33333H17.5L12.6667 13.6667ZM11.8333 16.8333L17 31.8333L3.83333 16.8333H11.8333ZM28.1667 16.8333H36.1667L23 31.8333L28.1667 16.8333ZM29.6667 14.5L34 8.5L37 14.5H29.6667Z"
             title="Add Resume"
-            para={<>
-            Show you're available for hire. List your years of experience, client<br/>testimonials, and specialties.<br/><br/>
-            Since you're on a free Pro membership trial, your Resume will be visible<br/>to the public and will show up in the Available to Hire search result for<br/>13 more days.
-            </>}
-            btn1={<><button className="btn_photo button_profile">Add Resume</button></>}
-          
+            para={
+              <>
+                Show you're available for hire. List your years of experience,
+                client
+                <br />
+                testimonials, and specialties.
+                <br />
+                <br />
+                Since you're on a free Pro membership trial, your Resume will be
+                visible
+                <br />
+                to the public and will show up in the <span className="resume">Available to Hire search
+                result</span> for
+                <br />
+                13 more days.
+              </>
+            }
+            btn1={
+              <>
+                <button className="btn_photo button_profile">Add Resume</button>
+              </>
+            }
           />
         ) : null}
       </div>
