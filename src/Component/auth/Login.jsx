@@ -1,21 +1,26 @@
-import React, { useContext ,useState} from "react";
+import React, { useContext, useState } from "react";
 import ButtonAuth from "../common/Button/ButtonAuth";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth";
 import { useNavigate } from "react-router-dom";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase/firebase";
 function Login() {
-  const {LoginAuth} = useContext(AuthContext)
-  const[email,setEmail]=useState("")
-  const [password,setPassword]=useState("")
+  const { LoginAuth } = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const login = ()=>{
-    // console.log(email,password);
-    LoginAuth(email,password)
-    // navigate('/')
-  }
+  const login = async () => {
+    try{
+      const user= await signInWithEmailAndPassword(auth,email,password)
+      console.log(user,"user");
+      navigate('/register')
+      }catch(err){
+      console.log(err,"eroor");
+      }
+  };
   return (
     <div className="authenticon">
       <div className="auth_conatiner">
@@ -23,14 +28,17 @@ function Login() {
           <span>Login to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
-            <input onChange={(e)=>setEmail(e.target.value)}/>
+            <input onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className="input">
             <div className="labels">
               <label>Password*</label>
               <label className="forget_pass">Forgot password?</label>
             </div>
-            <input  type="password" onChange={(e)=>setPassword(e.target.value)}/>
+            <input
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
 
           <ButtonAuth

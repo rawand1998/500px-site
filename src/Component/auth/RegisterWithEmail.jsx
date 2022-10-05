@@ -4,15 +4,21 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth";
+import {createUserWithEmailAndPassword} from "firebase/auth";
+import {auth} from '../../firebase/firebase'
 function RegisterWithEmail() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const { RegisterAuth } = useContext(AuthContext);
-  const authRegister = (e) => {
-    e.preventDefault();
-    RegisterAuth(email, password);
-    navigate("/login");
+  const authRegister = async(e) => {
+    try{
+    const user=  await  createUserWithEmailAndPassword(auth,email,password)
+    console.log(user,"user");
+    navigate('/')
+    }catch(err){
+console.log(err,"eroor");
+    }
+
   };
   return (
     <div className="authenticon">
@@ -43,9 +49,9 @@ function RegisterWithEmail() {
 
           <div className="sign_up_para">
             <span>
-              Don`t have a account ?
-              <Link className="auths_link" to="/register">
-                Sign up
+               Have a account ?
+              <Link className="auths_link" to="/login">
+               Login
               </Link>
             </span>
           </div>
