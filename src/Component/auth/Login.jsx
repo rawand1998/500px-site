@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useContext ,useState} from "react";
 import ButtonAuth from "../common/Button/ButtonAuth";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/auth";
+import { useNavigate } from "react-router-dom";
+
 function Login() {
+  const {LoginAuth} = useContext(AuthContext)
+  const[email,setEmail]=useState("")
+  const [password,setPassword]=useState("")
+  const navigate = useNavigate();
+
+  const login = ()=>{
+    // console.log(email,password);
+    LoginAuth(email,password)
+    // navigate('/')
+  }
   return (
     <div className="authenticon">
       <div className="auth_conatiner">
@@ -10,14 +23,14 @@ function Login() {
           <span>Login to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
-            <input />
+            <input onChange={(e)=>setEmail(e.target.value)}/>
           </div>
           <div className="input">
             <div className="labels">
               <label>Password*</label>
               <label className="forget_pass">Forgot password?</label>
             </div>
-            <input />
+            <input  type="password" onChange={(e)=>setPassword(e.target.value)}/>
           </div>
 
           <ButtonAuth
@@ -25,6 +38,7 @@ function Login() {
             bgcolor="rgb(8, 112, 209)"
             borderColor="rgb(8, 112, 209)"
             color="rgb(255, 255, 255)"
+            handleClick={login}
           />
 
           <div className="btns_auth">

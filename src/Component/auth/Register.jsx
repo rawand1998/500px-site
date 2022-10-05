@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import ButtonAuth from "../common/Button/ButtonAuth";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
+import { AuthContext } from "../../context/auth";
+
 function Register() {
+  const navigate = useNavigate();
+  const { authWithGoogle, authWithApple, authWithFaceBook } =
+    useContext(AuthContext);
+  const authRegister = () => {
+    navigate('/registerform')
+  };
+  const authRegisterGoogle = (e) => {
+    e.preventDefault()
+    console.log("goole");
+    authWithGoogle();
+  };
+  const authRegisterFacebook = () => {
+    // authWithFaceBook();
+  };
+  const authRegisterApple = () => {
+    // authWithApple();
+  };
   return (
     <div className="authenticon">
       <div className="auth_conatiner">
@@ -15,12 +35,14 @@ function Register() {
 
           <div className="btns_auth">
             <ButtonAuth
-              title="Login"
+              title="Register with gmail"
               bgcolor="rgb(8, 112, 209)"
               borderColor="rgb(8, 112, 209)"
               color="rgb(255, 255, 255)"
+              handleClick={authRegister}
             />
             <ButtonAuth
+              handleClick={authRegisterApple}
               title="Login with apple"
               bgcolor="rgb(34, 34, 34)"
               borderColor="rgb(34, 34, 34)"
@@ -29,6 +51,7 @@ function Register() {
               d2="M13.2981 3.84713C14.1199 2.8186 14.6826 1.41988 14.5264 0C13.3363 0.0527766 11.8479 0.822691 10.9912 1.82911C10.2333 2.71521 9.55574 4.16821 9.73072 5.53381C11.0674 5.63306 12.44 4.85948 13.2981 3.84713Z"
             />
             <ButtonAuth
+              handleClick={authRegisterFacebook}
               title="Login with facebook"
               bgcolor="rgb(60, 90, 150)"
               borderColor="rgb(60, 90, 150)"
@@ -44,6 +67,7 @@ function Register() {
               d2="M12.2449 23.9999C15.551 23.9999 18.3233 22.9259 20.3486 21.0923L16.391 18.0815C15.2951 18.8015 13.8931 19.2275 12.2449 19.2275C9.0551 19.2275 6.3551 17.1155 5.39388 14.2799H1.30286V17.3879C2.32164 19.376 3.88454 21.0473 5.81685 22.2149C7.74917 23.3826 9.97477 24.0006 12.2449 23.9999Z"
               d3="M5.39388 14.2801C5.14898 13.5601 5.00939 12.7921 5.00939 12.0001C5.00939 11.2081 5.14898 10.4401 5.39388 9.72006V6.61206H1.30286C0.445732 8.28391 -0.000440122 10.1291 3.25781e-07 12.0001C3.25781e-07 13.9369 0.472653 15.7681 1.30286 17.3881L5.39265 14.2801H5.39388Z"
               d4="M12.2449 4.7724C14.0424 4.7724 15.6563 5.3784 16.9261 6.5676L20.438 3.126C18.3171 1.188 15.5449 0 12.2449 0C7.45714 0 3.31837 2.688 1.30286 6.612L5.39265 9.72C6.35755 6.8832 9.05632 4.7724 12.2449 4.7724Z"
+              handleClick={authRegisterGoogle}
             />
           </div>
 
