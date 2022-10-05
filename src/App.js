@@ -11,7 +11,7 @@ import RegisterWithEmail from "./Component/auth/RegisterWithEmail";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase/firebase";
 function App() {;
-
+        
   return (
     <BrowserRouter>
       <NavBar />

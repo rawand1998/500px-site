@@ -4,23 +4,27 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth";
 import { useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+
 import { auth } from "../../firebase/firebase";
+import {signInWithEmailAndPassword} from 'firebase/auth'
 function Login() {
   const { LoginAuth } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const login = async () => {
-    try{
-      const user= await signInWithEmailAndPassword(auth,email,password)
-      console.log(user,"user");
-      navigate('/register')
-      }catch(err){
-      console.log(err,"eroor");
-      }
+  const login = async (e) => {
+    e.preventDefault()
+    try {
+      signInWithEmailAndPassword(auth,email, password).then((res) => {
+        console.log(res, "res");
+      });
+      navigate('/')
+    } catch (err) {
+      console.log(err);
+    }
   };
+
   return (
     <div className="authenticon">
       <div className="auth_conatiner">
