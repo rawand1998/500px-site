@@ -3,19 +3,21 @@ import ButtonAuth from "../common/Button/ButtonAuth";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/firebase";
 function RegisterWithEmail() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const authRegister = async () => {
-    auth.createUserWithEmailAndPassword(email, password).then((res) => {
-      const user = res.user;
-      console.log(res);
-      console.log(user.uid,"user");
-    });
+    try {
+      auth.createUserWithEmailAndPassword(email, password).then((res) => {
+        const user = res.user;
+        console.log(res);
+        console.log(user.uid, "user");
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <div className="authenticon">
@@ -24,7 +26,7 @@ function RegisterWithEmail() {
           <span>Sign up to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
-            <input onChange={(e) => setEmail(e.target.value)} />
+            <input onChange={(e) => setEmail(e.target.value)} value={email} />
           </div>
           <div className="input">
             <div className="labels">
@@ -32,6 +34,7 @@ function RegisterWithEmail() {
               <label className="forget_pass">Forgot password?</label>
             </div>
             <input
+            value={password}
               type="password"
               onChange={(e) => setPassword(e.target.value)}
             />

@@ -6,20 +6,21 @@ import { AuthContext } from "../../context/auth";
 import { useNavigate } from "react-router-dom";
 
 import { auth } from "../../firebase/firebase";
-import {signInWithEmailAndPassword} from 'firebase/auth'
 function Login() {
   const { LoginAuth } = useContext(AuthContext);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
   const navigate = useNavigate();
 
   const login = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    console.log(email, password);
     try {
-      signInWithEmailAndPassword(auth,email, password).then((res) => {
+      auth.signInWithEmailAndPassword( email, password).then((res) => {
         console.log(res, "res");
+        console.log("hi");
       });
-      navigate('/')
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -32,7 +33,7 @@ function Login() {
           <span>Login to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
-            <input onChange={(e) => setEmail(e.target.value)} />
+            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className="input">
             <div className="labels">
@@ -40,6 +41,7 @@ function Login() {
               <label className="forget_pass">Forgot password?</label>
             </div>
             <input
+            value={password}
               type="password"
               onChange={(e) => setPassword(e.target.value)}
             />

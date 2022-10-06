@@ -9,14 +9,23 @@ import { FaSearch } from "react-icons/fa";
 import ProfileNav from "./ProfileNav";
 import googlePaly from "../../../images/google play.jpg";
 import appStore from "../../../images/app store.png";
-function NavBar() {
+import { getAuth, onAuthStateChanged } from "firebase/auth";function NavBar() {
   const [widthScreen, setWidthScreen] = useState(0);
   const [isSticky, setSticky] = useState(false);
   const [visible, setVisible] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [auth, setAuth] = useState(false);
+  // const [auth, setAuth] = useState(false);
   const element = useRef(null);
   const navigate = useNavigate();
+const auth=getAuth()
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      const uid = user.uid;
+      console.log(uid,"uid");
+    } else {
+    }
+  });
+console.log(auth.currentUser);
   const handleScroll = (e) => {
     let fromTop = window.pageYOffset;
     fromTop > 150 ? setSticky(true) : setSticky(false);
@@ -177,18 +186,18 @@ function NavBar() {
               </li>
 
               <li>
-                <Link className="btns_nav_ discover" to="/register">
+                <Link className="btns_nav_ discover" to="/blog">
                   Blog
                 </Link>
               </li>
               <li>
                 <Link className="btns_nav_ discover" to="/register">
-                  Blog
+                  Register
                 </Link>
               </li>
               <li>
-                <Link className="btns_nav_ discover" to="/register">
-                  Blog
+                <Link className="btns_nav_ discover" to="/login">
+                  Login
                 </Link>
               </li>
             </ul>
