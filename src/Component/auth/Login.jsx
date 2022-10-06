@@ -2,12 +2,9 @@ import React, { useContext, useState } from "react";
 import ButtonAuth from "../common/Button/ButtonAuth";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/auth";
 import { useNavigate } from "react-router-dom";
-
 import { auth } from "../../firebase/firebase";
 function Login() {
-  const { LoginAuth } = useContext(AuthContext);
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const navigate = useNavigate();

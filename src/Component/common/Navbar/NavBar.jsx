@@ -9,23 +9,26 @@ import { FaSearch } from "react-icons/fa";
 import ProfileNav from "./ProfileNav";
 import googlePaly from "../../../images/google play.jpg";
 import appStore from "../../../images/app store.png";
-import { getAuth, onAuthStateChanged } from "firebase/auth";function NavBar() {
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+function NavBar() {
   const [widthScreen, setWidthScreen] = useState(0);
   const [isSticky, setSticky] = useState(false);
   const [visible, setVisible] = useState(false);
   const [clicked, setClicked] = useState(false);
-  // const [auth, setAuth] = useState(false);
+  const [authUser, setAuthUser] = useState(false);
   const element = useRef(null);
   const navigate = useNavigate();
-const auth=getAuth()
+  const auth = getAuth();
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
-      console.log(uid,"uid");
+      setAuthUser(true);
+      console.log(uid, "uid");
     } else {
+      setAuthUser(false);
     }
   });
-console.log(auth.currentUser);
+  console.log(auth.currentUser);
   const handleScroll = (e) => {
     let fromTop = window.pageYOffset;
     fromTop > 150 ? setSticky(true) : setSticky(false);
@@ -128,7 +131,7 @@ console.log(auth.currentUser);
                 </li>
 
                 <li>
-                  <Link className="btns_nav_ discover" to="/register">
+                  <Link className="btns_nav_ discover" to="register">
                     Quests
                   </Link>
                 </li>
@@ -141,30 +144,35 @@ console.log(auth.currentUser);
               </ul>
             </div>
           </div>
+
           <div className="right_navbar">
             <div className="search_input_icon">
               <FaSearch className="icon_search_nav" />
               <input placeholder="Search 500px" className="search_input" />
             </div>
-            {/* <ProfileNav/> */}
 
-            <div className="auth_btn">
-              <Link className="auth login" to="/login">
-                Login
-              </Link>
-              <Link className="auth register" to="/register">
-                Sign up
-              </Link>
-            </div>
+            {authUser ? (
+              <ProfileNav />
+            ) : (
+              <div className="auth_btn">
+                <Link className="auth login" to="/login">
+                  Login
+                </Link>
+                <Link className="auth register" to="/register">
+                  Sign up
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}
+
       {visible ? (
         <div className="right_side_mod">
           <div className="bowl_menu_mod">
             <ul className="navbar_menu_mode">
               <li>
-                <Link to="/popular">Discover </Link>
+                <Link to="popular">Discover </Link>
               </li>
               <li>
                 <Link to="/clients">Licensing</Link>

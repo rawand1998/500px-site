@@ -166,3 +166,45 @@
 .menu_width .logo {
   padding-left: 20px;
 }
+.img_menu {
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 8px 0px;
+  min-width: 140px;
+  margin-top: 12px;
+  margin-left: -20px;
+  border-top-width: 1px;
+  border-top-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 4px 12px, rgb(0 0 0 / 8%) 0px 0px 4px;
+}
+.img_menu::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgb(255, 255, 255);
+  filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px -2px 1px);
+}
+.img_menus {
+  position: relative;
+}
+.img_menu ul {
+  display: flex;
+  flex-direction: column;
+  /* padding: 5px; */
+}
+.img_menu ul a {
+  font-size: 14px;
+  line-height: 35px;
+  color: var(--black-color);
+  padding: 5px;
+}
+.img_menu ul a:hover{
+  background-color: rgb(41, 134, 247);
+  color: #fff;
+
+}
