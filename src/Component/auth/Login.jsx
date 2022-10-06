@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import ButtonAuth from "../common/Button/ButtonAuth";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase/firebase";
 function Login() {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const navigate = useNavigate();
+
+  const login = async (e) => {
+    e.preventDefault();
+    console.log(email, password);
+    try {
+      auth.signInWithEmailAndPassword( email, password).then((res) => {
+        console.log(res, "res");
+        console.log("hi");
+      });
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="authenticon">
       <div className="auth_conatiner">
@@ -10,14 +30,18 @@ function Login() {
           <span>Login to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
-            <input />
+            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
           <div className="input">
             <div className="labels">
               <label>Password*</label>
               <label className="forget_pass">Forgot password?</label>
             </div>
-            <input />
+            <input
+            value={password}
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
 
           <ButtonAuth
@@ -25,6 +49,7 @@ function Login() {
             bgcolor="rgb(8, 112, 209)"
             borderColor="rgb(8, 112, 209)"
             color="rgb(255, 255, 255)"
+            handleClick={login}
           />
 
           <div className="btns_auth">

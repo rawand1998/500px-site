@@ -7,7 +7,16 @@ import Login from "./Component/auth/Login";
 import Register from "./Component/auth/Register";
 import Popular from "./Component/Popular/Popular";
 import Portofilio from "./Component/portofilo/Portofilio";
+import RegisterWithEmail from "./Component/auth/RegisterWithEmail";
+import { onAuthStateChanged, getAuth } from "firebase/auth";
+// import {auth} from './firebase/firebase'
 function App() {
+  const auth = getAuth();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log("true");
+    }
+  });
   return (
     <BrowserRouter>
       <NavBar />
@@ -17,14 +26,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="popular" element={<Popular />} />
         <Route path="profile" element={<Portofilio />} />
-        {/* />
-      {/* <Route path="about" element={<About />} />
-      <Route path="clients" element={<Clients />} />
-      <Route path="enterprise" element={<Enterprise />} />
-       />
-   
-      <Route path="findWork" element={<FindWork />} />
-      <Route path="*" element={<Error />} />  */}
+        <Route path="registerform" element={<RegisterWithEmail />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-function ButtonAuth({ title, bgcolor, borderColor, color, d, d2, d3, d4 }) {
+function ButtonAuth({ title, bgcolor, borderColor, color, d, d2, d3, d4 ,handleClick}) {
   return (
     <button
       className="button_auth_common"
@@ -8,6 +8,7 @@ function ButtonAuth({ title, bgcolor, borderColor, color, d, d2, d3, d4 }) {
         backgroundColor: `${bgcolor}`,
         border: `${borderColor}`,
       }}
+      onClick={handleClick}
     >
       <svg height="24" width="24" fill="white">
         <path d={d}></path>
