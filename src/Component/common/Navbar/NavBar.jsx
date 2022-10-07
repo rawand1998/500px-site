@@ -3,21 +3,20 @@ import { Link } from "react-router-dom";
 import { FaMixer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import ProfileNav from "./ProfileNav";
 import { AiOutlineMenu } from "react-icons/ai";
 import googlePaly from "../../../images/google play.jpg";
 import appStore from "../../../images/app store.png";
 import firebase from "firebase/compat/app";
+import { auth } from "../../../firebase/firebase";
 
 function NavBar() {
   const navigate = useNavigate();
-  const [authUser, setAuthUser] = useState(false);
+  const [authUser, setAuthUser] = useState();
   const [visible, setVisible] = useState(false);
   const [widthScreen, setWidthScreen] = useState(0);
-  const [isSticky, setSticky] = useState(false);
   var user = firebase.auth().currentUser;
-  console.log(user);
 
   useEffect(() => {
     if (user) {
@@ -26,23 +25,11 @@ function NavBar() {
       setAuthUser(false);
     }
   }, [authUser]);
-
-  const handleScroll = (e) => {
-    let fromTop = window.pageYOffset;
-    fromTop > 150 ? setSticky(true) : setSticky(false);
-  };
+  console.log(authUser);
 
   const changeVisible = () => {
     setVisible(!visible);
   };
-
-  // check when scroll down
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const handleResize = () => {
     setWidthScreen(window.innerWidth);

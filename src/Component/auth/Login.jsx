@@ -4,24 +4,41 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
+import Error from "../common/error/Error";
 function Login() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  const [errMsg, setErrMsg] = useState("");
   const login = async (e) => {
     e.preventDefault();
-    console.log(email, password);
+    const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     try {
-      auth.signInWithEmailAndPassword( email, password).then((res) => {
-        console.log(res, "res");
-        console.log("hi");
-      });
-      navigate("/");
+      if (email !== "" && password !== "") {
+        auth
+          .signInWithEmailAndPassword(email, password)
+          .then((res) => {
+            navigate("/");
+          })
+          .catch((error) => {
+            setErrMsg("invalid email", error);
+          });
+      }
+      if (email === "" && password === "") {
+        setErrMsg("password and email is requird");
+      }
+      else if (email !== emailFormat) {
+        setErrMsg("email format eoor");
+      } else {
+        setErrMsg("");
+      }
     } catch (err) {
-      console.log(err);
+      alert(err);
     }
   };
+  const disbleError = ()=>{
+    setErrMsg("");
+  }
 
   return (
     <div className="authenticon">
@@ -30,19 +47,31 @@ function Login() {
           <span>Login to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
-            <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={errMsg ? 'error_input':''}
+              onKeyUp={disbleError}
+            />
+        
           </div>
+          <span className="error">{errMsg}</span>
           <div className="input">
             <div className="labels">
               <label>Password*</label>
               <label className="forget_pass">Forgot password?</label>
             </div>
             <input
-            value={password}
+              value={password}
               type="password"
               onChange={(e) => setPassword(e.target.value)}
+              className={errMsg ? 'error_input':''}
+              onKeyUp={disbleError}
             />
+        
           </div>
+          <span className="error">{errMsg}</span>
 
           <ButtonAuth
             title="Login"

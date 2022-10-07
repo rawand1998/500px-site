@@ -8,17 +8,35 @@ function RegisterWithEmail() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const authRegister = async () => {
+  const [errMsg, setErrMsg] = useState("");
+
+  const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  const authRegister = async (e) => {
+    e.preventDefault();
     try {
-      auth.createUserWithEmailAndPassword(email, password).then((res) => {
-        const user = res.user;
-        console.log(res);
-        console.log(user.uid, "user");
-      });
+      if (email !== "" && password !== "") {
+        auth.createUserWithEmailAndPassword(email, password).then((res) => {
+          const user = res.user;
+          navigate('/')
+        })
+      } if (email === "" && password === "") {
+        setErrMsg("password and email is requird");
+      } else if (email !== emailFormat) {
+        setErrMsg(" format eoor");
+      } else if(password.length<4){
+        setErrMsg("password weak");
+      }else{
+        setErrMsg("")
+      }
+     
     } catch (err) {
       console.log(err);
     }
   };
+  const disbleError = ()=>{
+    setErrMsg("");
+  }
+
   return (
     <div className="authenticon">
       <div className="auth_conatiner">
@@ -26,8 +44,13 @@ function RegisterWithEmail() {
           <span>Sign up to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
-            <input onChange={(e) => setEmail(e.target.value)} value={email} />
+            <input onChange={(e) => setEmail(e.target.value)} value={email}
+              className={errMsg ? 'error_input':''}
+              onKeyUp={disbleError}
+             />
+          
           </div>
+          <span className="error">{errMsg}</span>
           <div className="input">
             <div className="labels">
               <label>Password*</label>
@@ -37,8 +60,12 @@ function RegisterWithEmail() {
             value={password}
               type="password"
               onChange={(e) => setPassword(e.target.value)}
+              className={errMsg ? 'error_input':''}
+              onKeyUp={disbleError}
             />
+          
           </div>
+          <span className="error">{errMsg}</span>
           <ButtonAuth
             title="Register"
             bgcolor="rgb(8, 112, 209)"

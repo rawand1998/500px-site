@@ -45,6 +45,7 @@
   flex: 0 0 auto;
   color: var(--black-color);
   width: initial;
+  outline: none;
 }
 .input {
   display: flex;
@@ -102,4 +103,17 @@
 }
 .auths_link {
   color: rgb(8, 112, 209);
+}
+.error{
+  padding: 0px;
+  color: #f00 !important;
+  font-size: 16px !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.error_input{
+  border-color: #f00 !important;
+  outline: none;
+
 }
