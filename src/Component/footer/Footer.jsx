@@ -6,6 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 
 function Footer() {
   return (
@@ -79,9 +80,9 @@ function Footer() {
           <h4>© 500px</h4>
         </div>
         <div className="footer_menu_terms">
-          <a href="">Terms</a>
-          <a href="">Privacy</a>
-          <a href="">Support</a>
+          <Link href="">Terms</Link>
+          <Link href="">Privacy</Link>
+          <Link href="">Support</Link>
         </div>
       </div>
     </div>

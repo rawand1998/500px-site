@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./cardstyle.css";
 const CardPhoto = ({d,title,para,btn1,btn2}) => (
   <div className="cardPhoto">

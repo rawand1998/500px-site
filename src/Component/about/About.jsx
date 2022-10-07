@@ -7,12 +7,12 @@ import tree from "../../images/tree.PNG";
 function About() {
   const aboutContent = [
     {
-      img: <img src={queen} />,
+      img: <img src={queen} alt="not found" />,
       title: "Grow as a photographer",
       description: `Get immediate exposure with your first upload. Our Pulse algorithm surfaces new photographs and photographers, ensuring your photos are seen by the community so you receive valuable feedback on day one.`,
     },
     {
-      img: <img src={pin} />,
+      img: <img src={pin} alt="not found"  />,
       title: "Build your career",
       description: ` upload. Our Pulse algorithm surfaces new photographs and photographers, ensuring your photos are seen by the community so you receive valuable feedback on day one.
 
@@ -20,12 +20,12 @@ function About() {
         Market yourself as a professional photographer..`,
     },
     {
-      img: <img src={number} />,
+      img: <img src={number} alt="not found" />,
       title: "See how you're performing",
       description: `With Statistics and Pulse you get valuable insights into how your photos are performing and how you rank in comparison to other photographers in the community.`,
     },
     {
-      img: <img src={tree} />,
+      img: <img src={tree} alt="not found" />,
 
       title: "Sell your work",
       description: `Earn one of the highest royalty rates in the industry when you distribute your photography through 500px to a global marketplace, where buyers can view and purchase your work for commercial usage.`,

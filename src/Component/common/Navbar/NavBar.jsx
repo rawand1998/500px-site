@@ -1,34 +1,32 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
-import { FaArrowDown } from "react-icons/fa";
-import { AiOutlineMenu } from "react-icons/ai";
 import { FaMixer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import ProfileNav from "./ProfileNav";
+import { AiOutlineMenu } from "react-icons/ai";
 import googlePaly from "../../../images/google play.jpg";
 import appStore from "../../../images/app store.png";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import firebase from "firebase/compat/app";
+
 function NavBar() {
+  const navigate = useNavigate();
+  const [authUser, setAuthUser] = useState(false);
+  const [visible, setVisible] = useState(false);
   const [widthScreen, setWidthScreen] = useState(0);
   const [isSticky, setSticky] = useState(false);
-  const [visible, setVisible] = useState(false);
-  const [clicked, setClicked] = useState(false);
-  const [authUser, setAuthUser] = useState(false);
-  const element = useRef(null);
-  const navigate = useNavigate();
-  const auth = getAuth();
-  onAuthStateChanged(auth, (user) => {
+  var user = firebase.auth().currentUser;
+  console.log(user);
+
+  useEffect(() => {
     if (user) {
-      const uid = user.uid;
       setAuthUser(true);
-      console.log(uid, "uid");
     } else {
       setAuthUser(false);
     }
-  });
-  console.log(auth.currentUser);
+  }, [authUser]);
+
   const handleScroll = (e) => {
     let fromTop = window.pageYOffset;
     fromTop > 150 ? setSticky(true) : setSticky(false);
@@ -57,14 +55,11 @@ function NavBar() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const showMenu = () => {
-    setClicked(true);
-  };
   const homePage = () => {
     navigate("/");
   };
   return (
-    <>
+    <div>
       {widthScreen < 1103 ? (
         <div className="menu_width">
           <div className="logo" onClick={homePage}>
@@ -95,6 +90,7 @@ function NavBar() {
             <div className="bowl_menu">
               <ul className="navbar_menu">
                 <li>
+                  {" "}
                   <Link to="/popular">
                     Discover{" "}
                     <svg
@@ -150,7 +146,14 @@ function NavBar() {
               <FaSearch className="icon_search_nav" />
               <input placeholder="Search 500px" className="search_input" />
             </div>
-
+            {/* <div className="auth_btn">
+                    <Link className="auth login" to="/login">
+                      Login
+                    </Link>
+                    <Link className="auth register" to="/register">
+                      Sign up
+                    </Link>
+                  </div> */}
             {authUser ? (
               <ProfileNav />
             ) : (
@@ -232,7 +235,7 @@ function NavBar() {
           </div>
         </div>
       ) : null}
-    </>
+    </div>
   );
 }
 

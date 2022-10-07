@@ -3,10 +3,8 @@ import user from "../../images/user.png";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { CardPhoto, CardGalleries } from "./ProfileCard";
-// import  from './ProfileCard'
 
 function Portofilio() {
-  const [showCat, setshowCat] = useState(false);
   const [tab, setTab] = useState("Photos");
 
   const icons = [

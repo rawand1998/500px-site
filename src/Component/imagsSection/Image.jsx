@@ -32,7 +32,7 @@ function Image() {
           {img.map(({ image, title }) => {
             return (
               <div className="image_section_conatiner_single">
-                <img src={image} />
+                <img src={image} alt="not found"/>
                 <span className="title_img">{title}</span>
               </div>
             );

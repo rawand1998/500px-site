@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { auth } from "../firebase/firebase";
 import {
   GoogleAuthProvider,
   FacebookAuthProvider,
   OAuthProvider,
   signInWithPopup,
-  signInWithEmailAndPassword,
 } from "firebase/auth";
 import {
   createUserWithEmailAndPassword,
-  onAuthStateChanged,
 } from "firebase/auth";
 export const AuthContext = React.createContext();
 
