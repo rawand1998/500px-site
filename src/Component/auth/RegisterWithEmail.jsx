@@ -4,21 +4,36 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
+import firebase from "firebase/compat/app";
+import {AuthContext} from '../../context/auth'
 function RegisterWithEmail() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [errMsg, setErrMsg] = useState("");
-
+const {RegisterAuth} = useContext(AuthContext)
   const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
   const authRegister = async (e) => {
     e.preventDefault();
     try {
       if (email !== "" && password !== "") {
-        auth.createUserWithEmailAndPassword(email, password).then((res) => {
-          const user = res.user;
-          navigate("/");
-        });
+       RegisterAuth(email,password)
+        // auth
+        //   .createUserWithEmailAndPassword(email, password)
+        //   .then((res) => {
+        //     let email = res.user.email;
+        //     const result = email.split("@")[0];
+        //   const user=  firebase.auth().currentUser;
+        //     user.updateProfile({
+        //       displayName: "Jane Q. User",
+        //       photoURL: "https://example.com/jane-q-user/profile.jpg",
+        //     });
+        //     console.log(res.user.displayName);
+        //   })
+
+        //   .then(() => {
+        //     navigate("/");
+        //   });
       }
       if (email === "" && password === "") {
         setErrMsg("password and email is requird");

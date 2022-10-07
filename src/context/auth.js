@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { auth } from "../firebase/firebase";
 import {
   GoogleAuthProvider,
@@ -6,25 +6,28 @@ import {
   OAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import {
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 export const AuthContext = React.createContext();
 
 function AuthProviders({ children }) {
   const provider = new GoogleAuthProvider();
   const providerFacebook = new FacebookAuthProvider();
   const providerApple = new OAuthProvider();
+  const [userName,setUserName]=useState('bhvbrfe')
 
   const RegisterAuth = async (email, password) => {
     try {
-      const user = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(user);
+      auth.createUserWithEmailAndPassword(email, password).then((res) => {
+      let email = res.user.email
+      const result = email.split("@")[0];
+       return setUserName(result)
+      
+      })
     } catch (err) {
       console.error(err, "err");
     }
   };
-
+  console.log("","jhujjhu",userName);
   // const LoginAuth = (email, password) => {
   //   try {
   //     auth.signInWithEmailAndPassword(email, password);
@@ -53,6 +56,7 @@ function AuthProviders({ children }) {
         authWithGoogle,
         authWithApple,
         authWithFaceBook,
+        userName
       }}
     >
       {children}

@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import AuthProvider from "./context/auth";
+import AuthProviders from "./context/auth";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <AuthProvider>
+  <AuthProviders>
     <App />
-  </AuthProvider>
+  </AuthProviders>
 );
 
 // If you want to start measuring performance in your app, pass a function
