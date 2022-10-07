@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaMixer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -10,24 +10,23 @@ import googlePaly from "../../../images/google play.jpg";
 import appStore from "../../../images/app store.png";
 import firebase from "firebase/compat/app";
 import { auth } from "../../../firebase/firebase";
-
+import {AuthContext} from '../../../context/auth'
 function NavBar() {
   const navigate = useNavigate();
   const [authUser, setAuthUser] = useState();
   const [visible, setVisible] = useState(false);
   const [widthScreen, setWidthScreen] = useState(0);
-  var user = firebase.auth().currentUser;
-
-  useEffect(() => {
-    if (user) {
-      setAuthUser(true);
-      console.log(user.displayName)
-      console.log(auth.currentUser);
-    } else {
-      setAuthUser(false);
-    }
-  }, [authUser]);
-  console.log(authUser);
+  // var user = firebase.auth().currentUser;
+  const {ifLogin} = useContext(AuthContext)
+  // useEffect(() => {
+  //   if (user) {
+  //     setAuthUser(true);
+  //     console.log(user.displayName)
+  //     console.log(auth.currentUser);
+  //   } else {
+  //     setAuthUser(false);
+  //   }
+  // }, [authUser]);
 
   const changeVisible = () => {
     setVisible(!visible);
@@ -143,7 +142,7 @@ function NavBar() {
                       Sign up
                     </Link>
                   </div> */}
-            {authUser ? (
+            {ifLogin ? (
               <ProfileNav />
             ) : (
               <div className="auth_btn">

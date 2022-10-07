@@ -1,43 +1,67 @@
 import React, { useState } from "react";
-import { auth } from "../firebase/firebase";
+import { auth,db } from "../firebase/firebase";
 import {
   GoogleAuthProvider,
   FacebookAuthProvider,
   OAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 export const AuthContext = React.createContext();
 
 function AuthProviders({ children }) {
   const provider = new GoogleAuthProvider();
   const providerFacebook = new FacebookAuthProvider();
   const providerApple = new OAuthProvider();
-  const [userName,setUserName]=useState('bhvbrfe')
-
+  const [userName, setUserName] = useState("");
+  const [ifLogin, setIfLogin] = useState(false);
+  const [idUser,setUserId]=useState('')
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      
+      setIfLogin(true);
+      setUserId(user.uid);
+      console.log(idUser);
+    }
+  });
   const RegisterAuth = async (email, password) => {
     try {
       auth.createUserWithEmailAndPassword(email, password).then((res) => {
-      let email = res.user.email
-      const result = email.split("@")[0];
-       return setUserName(result)
-      
-      })
+        let email = res.user.email;
+        let result = email.split("@")[0];
+         setIfLogin(true);
+         setUserId(res.user.uid)
+         db.collection('user').add({
+          uid: res.user.uid,
+          name: result,
+        })
+      });
     } catch (err) {
       console.error(err, "err");
     }
   };
-  console.log("","jhujjhu",userName);
-  // const LoginAuth = (email, password) => {
-  //   try {
-  //     auth.signInWithEmailAndPassword(email, password);
-
-  //     console.log("data login");
-  //     console.log("rawand hosam meay jaradh");
-  //   } catch (err) {
-  //     console.log(err, "err");
-  //   }
-  // };
+  const getName=()=>{
+   console.log(idUser);
+    try {
+      db.collection("user").where("uid",'==',idUser).get().then((res)=>{
+        console.log(res);
+      })
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  const LoginAuth = (email, password) => {
+    try {
+      auth.signInWithEmailAndPassword(email, password).then((res)=>{
+        let email = res.user.email;
+        let result = email.split("@")[0];
+        //  setUserName(result);
+         
+      })
+    } catch (err) {
+      console.log(err, "err");
+    }
+  };
   const authWithApple = () => {
     signInWithPopup(auth, providerApple);
   };
@@ -47,16 +71,24 @@ function AuthProviders({ children }) {
   const authWithFaceBook = () => {
     signInWithPopup(auth, providerFacebook);
   };
+  const logout = () => {
+    auth.signOut();
+    setIfLogin(false);
+  };
 
   return (
     <AuthContext.Provider
       value={{
         RegisterAuth,
-        // LoginAuth,
+        LoginAuth,
         authWithGoogle,
         authWithApple,
         authWithFaceBook,
-        userName
+        userName,
+        ifLogin,
+        logout,
+        getName,
+        idUser
       }}
     >
       {children}

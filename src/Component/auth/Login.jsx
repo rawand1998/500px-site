@@ -5,24 +5,28 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
 import Error from "../common/error/Error";
+import {AuthContext} from '../../context/auth'
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [errMsg, setErrMsg] = useState("");
+  const {LoginAuth} = useContext(AuthContext)
   const login = async (e) => {
     e.preventDefault();
     const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     try {
       if (email !== "" && password !== "") {
-        auth
-          .signInWithEmailAndPassword(email, password)
-          .then((res) => {
-            navigate("/");
-          })
-          .catch((error) => {
-            setErrMsg("invalid email", error);
-          });
+        LoginAuth(email,password)
+        navigate("/");
+        // auth
+        //   .signInWithEmailAndPassword(email, password)
+        //   .then((res) => {
+        //     navigate("/");
+        //   })
+        //   .catch((error) => {
+        //     setErrMsg("invalid email", error);
+        //   });
       }
       if (email === "" && password === "") {
         setErrMsg("password and email is requird");
@@ -32,8 +36,7 @@ function Login() {
         setErrMsg("");
       }
     } catch (err) {
-      alert(err);
-    }
+      setErrMsg("invalid email", err);    }
   };
   const disbleError = () => {
     setErrMsg("");

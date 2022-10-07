@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import ButtonAuth from "../common/Button/ButtonAuth";
 import { useNavigate } from "react-router-dom";
+
 import "./style.css";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
@@ -10,6 +11,7 @@ function RegisterWithEmail() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   const [errMsg, setErrMsg] = useState("");
 const {RegisterAuth} = useContext(AuthContext)
   const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -18,6 +20,7 @@ const {RegisterAuth} = useContext(AuthContext)
     try {
       if (email !== "" && password !== "") {
        RegisterAuth(email,password)
+       navigate("/login");
         // auth
         //   .createUserWithEmailAndPassword(email, password)
         //   .then((res) => {
