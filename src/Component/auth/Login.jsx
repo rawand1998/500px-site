@@ -26,8 +26,7 @@ function Login() {
       }
       if (email === "" && password === "") {
         setErrMsg("password and email is requird");
-      }
-      else if (email !== emailFormat) {
+      } else if (email !== emailFormat) {
         setErrMsg("email format eoor");
       } else {
         setErrMsg("");
@@ -36,9 +35,9 @@ function Login() {
       alert(err);
     }
   };
-  const disbleError = ()=>{
+  const disbleError = () => {
     setErrMsg("");
-  }
+  };
 
   return (
     <div className="authenticon">
@@ -51,10 +50,9 @@ function Login() {
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={errMsg ? 'error_input':''}
+              className={errMsg ? "error_input" : ""}
               onKeyUp={disbleError}
             />
-        
           </div>
           <span className="error">{errMsg}</span>
           <div className="input">
@@ -66,10 +64,9 @@ function Login() {
               value={password}
               type="password"
               onChange={(e) => setPassword(e.target.value)}
-              className={errMsg ? 'error_input':''}
+              className={errMsg ? "error_input" : ""}
               onKeyUp={disbleError}
             />
-        
           </div>
           <span className="error">{errMsg}</span>
 

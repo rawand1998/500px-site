@@ -17,25 +17,25 @@ function RegisterWithEmail() {
       if (email !== "" && password !== "") {
         auth.createUserWithEmailAndPassword(email, password).then((res) => {
           const user = res.user;
-          navigate('/')
-        })
-      } if (email === "" && password === "") {
+          navigate("/");
+        });
+      }
+      if (email === "" && password === "") {
         setErrMsg("password and email is requird");
       } else if (email !== emailFormat) {
         setErrMsg(" format eoor");
-      } else if(password.length<4){
+      } else if (password.length < 4) {
         setErrMsg("password weak");
-      }else{
-        setErrMsg("")
+      } else {
+        setErrMsg("");
       }
-     
     } catch (err) {
       console.log(err);
     }
   };
-  const disbleError = ()=>{
+  const disbleError = () => {
     setErrMsg("");
-  }
+  };
 
   return (
     <div className="authenticon">
@@ -44,11 +44,12 @@ function RegisterWithEmail() {
           <span>Sign up to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
-            <input onChange={(e) => setEmail(e.target.value)} value={email}
-              className={errMsg ? 'error_input':''}
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              className={errMsg ? "error_input" : ""}
               onKeyUp={disbleError}
-             />
-          
+            />
           </div>
           <span className="error">{errMsg}</span>
           <div className="input">
@@ -57,13 +58,12 @@ function RegisterWithEmail() {
               <label className="forget_pass">Forgot password?</label>
             </div>
             <input
-            value={password}
+              value={password}
               type="password"
               onChange={(e) => setPassword(e.target.value)}
-              className={errMsg ? 'error_input':''}
+              className={errMsg ? "error_input" : ""}
               onKeyUp={disbleError}
             />
-          
           </div>
           <span className="error">{errMsg}</span>
           <ButtonAuth
