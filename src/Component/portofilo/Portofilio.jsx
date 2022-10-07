@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import user from "../../images/user.png";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { CardPhoto, CardGalleries } from "./ProfileCard";
-
+import {AuthContext} from '../../context/auth'
 function Portofilio() {
   const [tab, setTab] = useState("Photos");
-
+  const {userName} = useContext(AuthContext)
+  console.log(userName,"gtrgbt");
   const icons = [
     {
       d: "M24 23.1L21.7 16.8C21.7 16.7 21.6 16.6 21.5 16.6L8.30001 3.30002C8.30001 3.30002 8.30001 3.30002 8.20001 3.30002L6.00001 1.00002C4.70001 -0.299976 2.40001 -0.299976 1.00001 1.00002C-0.399988 2.40002 -0.399988 4.60002 1.00001 6.00002L3.30001 8.30002C3.30001 8.30002 3.30001 8.30002 3.30001 8.40002L16.4 21.6C16.5 21.7 16.6 21.7 16.6 21.8L22.9 24.1C23 24.1 23.1 24.1 23.1 24.1C23.3 24.1 23.5 24 23.6 23.9C24 23.6 24.1 23.3 24 23.1ZM19 18L6.80001 5.80002L7.80001 4.80002L20 17L19 18ZM2.00001 2.00002C2.40001 1.60002 3.00001 1.40002 3.50001 1.40002C4.00001 1.40002 4.60001 1.60002 5.00001 2.00002L6.80001 3.80002L3.80001 6.80002L2.00001 5.00002C1.20001 4.20002 1.20001 2.80002 2.00001 2.00002ZM5.80001 6.80002L18 19L17 20L4.80001 7.80002L5.80001 6.80002ZM20.7 18.3L21.4 20.2L20.2 21.4L18.3 20.7L20.7 18.3Z",
@@ -37,7 +38,7 @@ function Portofilio() {
       </div>
       <div className="profile_pro_icon">
         <div className="profile_name">
-          <span>Rawand Jaradh</span>
+          <span>{userName}</span>
           <span>1 followrs</span>
         </div>
       </div>

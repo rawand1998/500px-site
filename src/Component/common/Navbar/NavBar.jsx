@@ -21,6 +21,8 @@ function NavBar() {
   useEffect(() => {
     if (user) {
       setAuthUser(true);
+      console.log(user.displayName)
+      console.log(auth.currentUser);
     } else {
       setAuthUser(false);
     }
