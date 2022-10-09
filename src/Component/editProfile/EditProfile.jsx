@@ -1,19 +1,19 @@
 import React from "react";
-import { FaArrowLeft, FaCamera } from "react-icons/fa";
+import {  FaCamera } from "react-icons/fa";
 import user from "../../images/user.png";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { AiOutlineMenu } from "react-icons/ai";
 
-import { CardEdit, CardGalleries } from "../portofilo/ProfileCard";
+import { CardEdit } from "../portofilo/ProfileCard";
 function EditProfile() {
   return (
     <div className="edit_container">
       <div className="edit_lable">
         <span>Edit Profile</span>
-        <FaArrowLeft />
       </div>
       <div className="edit">
+        <div className="first_banner">
         <div className="cover_imgs">
           <div className="change_img_cover">
             <FaCamera />
@@ -26,7 +26,7 @@ function EditProfile() {
             <Link to="">pro</Link>
           </div>
         </div>
-
+        </div>
         <form className="form_profile_edit">
           <div className="input_edit_profile">
             <label>First name</label>
@@ -206,7 +206,6 @@ function EditProfile() {
           </div>
 
           <div className="edit_banner1">
-        
             <hr></hr>
             <div className="edit_content">
               <div className="left_content">
@@ -226,14 +225,16 @@ function EditProfile() {
             </div>
             <hr></hr>
           </div>
-         
         </div>
         <div className="edit_btns">
-            <button className="edit_btn">Cancel</button>
-            <button className="edit_btn edit_save">Save</button>
+          <button className="edit_btn">Cancel</button>
+          <button className="edit_btn edit_save">Save</button>
         </div>
         <div className="last_para">
-            <span>Visit your <span>Settings page</span> to change your password, username, connect to social networks, add gear, and more.</span>
+          <span>
+            Visit your <span>Settings page</span> to change your password,
+            username, connect to social networks, add gear, and more.
+          </span>
         </div>
       </div>
     </div>
