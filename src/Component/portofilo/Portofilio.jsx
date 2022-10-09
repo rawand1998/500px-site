@@ -8,7 +8,7 @@ function Portofilio() {
   const [tab, setTab] = useState("Photos");
   const {getName,userName} = useContext(AuthContext)
 console.log(userName);
-
+const {id}=useParams()
 
   
   const icons = [
@@ -26,7 +26,7 @@ console.log(userName);
     },
   ];
  useEffect (()=>{
-  getName()
+  getName(id)
 },[])
   return (
     <div className="profile_container">

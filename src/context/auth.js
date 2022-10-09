@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { auth,db } from "../firebase/firebase";
+import { auth, db } from "../firebase/firebase";
 import {
   GoogleAuthProvider,
   FacebookAuthProvider,
@@ -15,13 +15,11 @@ function AuthProviders({ children }) {
   const providerApple = new OAuthProvider();
   const [userName, setUserName] = useState("");
   const [ifLogin, setIfLogin] = useState(false);
-  const [idUser,setUserId]=useState('')
+  const [idUser, setUserId] = useState("");
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      
       setIfLogin(true);
       setUserId(user.uid);
-      console.log(idUser);
     }
   });
   const RegisterAuth = async (email, password) => {
@@ -29,35 +27,38 @@ function AuthProviders({ children }) {
       auth.createUserWithEmailAndPassword(email, password).then((res) => {
         let email = res.user.email;
         let result = email.split("@")[0];
-         setIfLogin(true);
-         setUserId(res.user.uid)
-         db.collection('user').add({
-          uid: res.user.uid,
+        setIfLogin(true);
+        setUserId(res.user.uid);
+        setUserName(result);
+        db.collection("user").add({
+          user_id: res.user.uid,
           name: result,
-        })
+        });
+     
       });
     } catch (err) {
       console.error(err, "err");
     }
   };
-  const getName=()=>{
-   console.log(idUser);
+  const getName = (id) => {
+    console.log(id);
+   
     try {
-      db.collection("user").where("uid",'==',idUser).get().then((res)=>{
-        console.log(res);
-      })
+      db.collection("user")
+        .where("user_id", "==", id)
+        .get().then((res)=>console.log(res.docs.map((data)=>console.log(data,"data")),"res"))
+      
     } catch (err) {
       console.log(err);
     }
-  }
+  };
   const LoginAuth = (email, password) => {
     try {
-      auth.signInWithEmailAndPassword(email, password).then((res)=>{
+      auth.signInWithEmailAndPassword(email, password).then((res) => {
         let email = res.user.email;
         let result = email.split("@")[0];
-        //  setUserName(result);
-         
-      })
+         setUserName(result);
+      });
     } catch (err) {
       console.log(err, "err");
     }
@@ -88,7 +89,7 @@ function AuthProviders({ children }) {
         ifLogin,
         logout,
         getName,
-        idUser
+        idUser,
       }}
     >
       {children}

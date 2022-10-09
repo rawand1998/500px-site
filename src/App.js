@@ -20,7 +20,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="popular" element={<Popular />} />
-        <Route path="profile" element={<Portofilio />} />
+        <Route path="profile/:id" element={<Portofilio />} />
         <Route path="registerform" element={<RegisterWithEmail />} />
       </Routes>
     </BrowserRouter>

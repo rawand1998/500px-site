@@ -16,6 +16,7 @@ function Register() {
     e.preventDefault()
     console.log("goole");
     authWithGoogle();
+    navigate('/')
   };
   const authRegisterFacebook = () => {
     // authWithFaceBook();
