@@ -1,0 +1,213 @@
+.edit_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 50px;
+}
+.edit {
+  border: 1px solid #ddd;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height:100vh;
+}
+
+.cover_imgs {
+  width: 100%;
+  background-color: var(--black-color);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first_banner{
+  position: relative;
+  background-color: aqua;
+
+}
+.banner_user_img{
+  position: absolute;
+  left: 50%;
+  right: 50%;
+top: 68%;
+}
+.change_img_cover {
+  background-color: #fff;
+  padding: 18px 22px;
+  border-color: rgb(8, 112, 209);
+  color: rgb(8, 112, 209);
+  border-radius: 28px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid rgb(8, 112, 209);
+  text-align: center;
+  width: 50%;
+  cursor: pointer;
+}
+.edit_lable {
+  padding: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.form_profile_edit {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.input_edit_profile {
+  display: flex;
+  flex-direction: column;
+}
+.input_edit_profile label {
+  display: flex;
+  align-items: flex-start;
+  line-height: 40px;
+}
+.input_edit_profile input {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(215, 216, 219);
+  border-radius: 4px;
+  height: 20px;
+  font-size: 16px;
+  padding: 12px 16px;
+  flex: 0 0 auto;
+  color: rgb(34, 34, 34);
+  width: initial;
+}
+.about_edit {
+  width: 620px;
+}
+.about_edit textarea {
+  padding: 12px 16px;
+  height: 72px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(215, 216, 219);
+  border-radius: 4px;
+}
+.section_card_edit {
+  margin-top: 50px;
+  background-color: rgb(247, 248, 250);
+  width: 100%;
+  padding-top: 20px;
+}
+.edit_advertisment {
+  word-break: break-word;
+  max-width: 100%;
+
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 16px;
+  background-color: rgb(34, 34, 34);
+  height: 80px;
+  width: 90%;
+  font-size: 20px;
+  margin-top: 15px;
+  margin: 15px 16px;
+}
+.edit_advertisment span {
+  padding: 15px;
+  color: #fff;
+}
+.table_edit_profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2px;
+  justify-content: space-between;
+  /* height: 900px; */
+}
+.edit_banner1 {
+  width: 100%;
+}
+.edit_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 0px;
+}
+.left_content {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  justify-content: space-around;
+}
+.right_content {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 148px;
+  justify-content: space-around;
+}
+.edit_btns {
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+  align-items: center;
+  margin-top: 15px;
+  height: 400px;
+  margin-right: 5px;
+}
+.edit_btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  width: auto;
+  min-width: 80px;
+  max-height: 36px;
+  padding: 12px 14px;
+  background-color: transparent;
+  border-color: transparent;
+  color: rgb(8, 112, 209);
+  height: 56px;
+}
+.edit_save {
+  background-color: rgb(8, 112, 209);
+  color: #fff;
+  border-radius: 24px;
+  width: 160px;
+}
+.last_para {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 18px;
+  line-height: 25px;
+}
+.last_para span > span {
+  color: rgb(8, 112, 209);
+}
+
+@media screen and (min-width: 600px) and (max-width: 1440px) {
+  .form_profile_edit {
+    grid-template-columns: repeat(1, 50%);
+  }
+  .edit_content {
+    justify-content: space-around;
+  }
+  .last_para {
+    padding: 25px 50px;
+  }
+  .about_edit {
+    width: 100%;
+  }
+  .edit_advertisment {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
