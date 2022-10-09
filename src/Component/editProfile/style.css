@@ -144,7 +144,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-size: 16px;
+  font-size: 20px;
   padding: 15px 0px;
 }
 .left_content {
@@ -267,4 +267,6 @@
   align-items: center;
   width: 100px;
   justify-content: space-around;
+
 }
+

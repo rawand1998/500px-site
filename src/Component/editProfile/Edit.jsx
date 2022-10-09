@@ -42,7 +42,7 @@ function Edit({ data }) {
             </svg>
           </div>
 
-          {menu ? <IconMenu eye={eye} setEye={setEye} /> : ""}
+          {menu ? <IconMenu eye={eye} setEye={setEye} showMenu={showMenu} menu={menu}/> : ""}
         </div>
       </div>
     </div>

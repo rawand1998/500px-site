@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
-function IconMenu({ eye, setEye }) {
+function IconMenu({ eye, setEye,menu,showMenu }) {
   const [check, setCheck] = useState(false);
   const showCheck = () => {
     setCheck(!check);
     setEye(!eye);
+    showMenu(!menu)
   };
   
-
+console.log(check);
   return (
     <div className="menus_show_hide">
       <div className="menu_show" onClick={showCheck}>
