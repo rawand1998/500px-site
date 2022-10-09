@@ -50,20 +50,19 @@ function Popular() {
           </ul>
         </div>
       </div>
-     
+
       <div className="images_sections_pup">
         <div className="image_section_conatiner_pop">
           {result.map((image) => {
             return (
               <div className="image_section_conatiner_single_pop">
-                <img src={image.urls.thumb} />
+                <img src={image.urls.small_s3} />
                 <span className="title_img">{image.user.name}</span>
               </div>
             );
           })}
         </div>
       </div>
- 
     </div>
   );
 }

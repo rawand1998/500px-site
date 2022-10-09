@@ -66,8 +66,13 @@ function AuthProviders({ children }) {
   const authWithApple = () => {
     signInWithPopup(auth, providerApple);
   };
-  const authWithGoogle = (e) => {
-    signInWithPopup(auth, provider);
+  const authWithGoogle = () => {
+    try{
+      signInWithPopup(auth, provider);
+
+    }catch(err){
+      console.log(err);
+    }
   };
   const authWithFaceBook = () => {
     signInWithPopup(auth, providerFacebook);
@@ -75,6 +80,7 @@ function AuthProviders({ children }) {
   const logout = () => {
     auth.signOut();
     setIfLogin(false);
+    
   };
 
   return (

@@ -16,17 +16,8 @@ function NavBar() {
   const [authUser, setAuthUser] = useState();
   const [visible, setVisible] = useState(false);
   const [widthScreen, setWidthScreen] = useState(0);
-  // var user = firebase.auth().currentUser;
   const {ifLogin} = useContext(AuthContext)
-  // useEffect(() => {
-  //   if (user) {
-  //     setAuthUser(true);
-  //     console.log(user.displayName)
-  //     console.log(auth.currentUser);
-  //   } else {
-  //     setAuthUser(false);
-  //   }
-  // }, [authUser]);
+
 
   const changeVisible = () => {
     setVisible(!visible);
@@ -134,14 +125,7 @@ function NavBar() {
               <FaSearch className="icon_search_nav" />
               <input placeholder="Search 500px" className="search_input" />
             </div>
-            {/* <div className="auth_btn">
-                    <Link className="auth login" to="/login">
-                      Login
-                    </Link>
-                    <Link className="auth register" to="/register">
-                      Sign up
-                    </Link>
-                  </div> */}
+          
             {ifLogin ? (
               <ProfileNav />
             ) : (
@@ -163,39 +147,39 @@ function NavBar() {
           <div className="bowl_menu_mod">
             <ul className="navbar_menu_mode">
               <li>
-                <Link to="popular">Discover </Link>
+                <Link to="popular" onClick={changeVisible}>Discover </Link>
               </li>
               <li>
-                <Link to="/clients">Licensing</Link>
+                <Link to="/clients" onClick={changeVisible}>Licensing</Link>
               </li>
               <li>
-                <Link to="/about">
+                <Link to="/about" onClick={changeVisible}>
                   NFT VAULT <span className="beta">BETA</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/enterprise">Memberships</Link>
+                <Link to="/enterprise" onClick={changeVisible}>Memberships</Link>
               </li>
 
               <li>
-                <Link className="btns_nav_ discover" to="/register">
+                <Link className="btns_nav_ discover" to="/register" onClick={changeVisible}>
                   Quests
                 </Link>
               </li>
 
               <li>
-                <Link className="btns_nav_ discover" to="/blog">
+                <Link className="btns_nav_ discover" to="/blog" onClick={changeVisible}>
                   Blog
                 </Link>
               </li>
               <li>
-                <Link className="btns_nav_ discover" to="/register">
+                <Link className="btns_nav_ discover" to="/register" onClick={changeVisible}>
                   Register
                 </Link>
               </li>
               <li>
-                <Link className="btns_nav_ discover" to="/login">
+                <Link className="btns_nav_ discover" to="/login" onClick={changeVisible}>
                   Login
                 </Link>
               </li>
