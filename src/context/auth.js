@@ -34,7 +34,6 @@ function AuthProviders({ children }) {
           user_id: res.user.uid,
           name: result,
         });
-     
       });
     } catch (err) {
       console.error(err, "err");
@@ -42,12 +41,17 @@ function AuthProviders({ children }) {
   };
   const getName = (id) => {
     console.log(id);
-   
+
     try {
       db.collection("user")
         .where("user_id", "==", id)
-        .get().then((res)=>console.log(res.docs.map((data)=>console.log(data,"data")),"res"))
-      
+        .get()
+        .then((res) =>
+          console.log(
+            res.docs.map((data) => console.log(data, "data")),
+            "res"
+          )
+        );
     } catch (err) {
       console.log(err);
     }
@@ -57,7 +61,7 @@ function AuthProviders({ children }) {
       auth.signInWithEmailAndPassword(email, password).then((res) => {
         let email = res.user.email;
         let result = email.split("@")[0];
-         setUserName(result);
+        setUserName(result);
       });
     } catch (err) {
       console.log(err, "err");
@@ -67,10 +71,9 @@ function AuthProviders({ children }) {
     signInWithPopup(auth, providerApple);
   };
   const authWithGoogle = () => {
-    try{
+    try {
       signInWithPopup(auth, provider);
-
-    }catch(err){
+    } catch (err) {
       console.log(err);
     }
   };
@@ -78,9 +81,9 @@ function AuthProviders({ children }) {
     signInWithPopup(auth, providerFacebook);
   };
   const logout = () => {
-    auth.signOut();
-    setIfLogin(false);
-    
+    auth.signOut().then(() => {
+      setIfLogin(false);
+    });
   };
 
   return (

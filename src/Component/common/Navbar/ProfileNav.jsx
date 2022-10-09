@@ -11,8 +11,7 @@ function ProfileNav() {
   const showmenu = () => {
     setMenu(!menu);
   };
-  const showmenulogouts = (e) => {
-    e.preventDefault();
+  const logouts = () => {
     logout();
   };
   return (
@@ -41,20 +40,18 @@ function ProfileNav() {
                 <Link to="" onClick={showmenu}>
                   Liked photos
                 </Link>
-                <Link to="" onClick={showmenu
-}>
-                </Link>
+                <Link to="" onClick={showmenu}></Link>
                 <Link to="" onClick={showmenu}>
                   Photo managers
                 </Link>
                 <Link to="" onClick={showmenu}>
                   Licebsing manager
                 </Link>
-            
+
                 <Link to="" onClick={showmenu}>
                   Earning
                 </Link>
-                <br/>
+                <br />
                 <Link to="" onClick={showmenu}>
                   Memberships
                 </Link>
@@ -64,8 +61,8 @@ function ProfileNav() {
                 <Link to="" onClick={showmenu}>
                   Support
                 </Link>
-                <br/>
-                <Link to="" onClick={logout}>
+                <br />
+                <Link to="" onClick={logouts}>
                   Logout
                 </Link>
               </ul>
