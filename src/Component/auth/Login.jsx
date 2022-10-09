@@ -5,24 +5,28 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
 import Error from "../common/error/Error";
+import {AuthContext} from '../../context/auth'
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [errMsg, setErrMsg] = useState("");
+  const {LoginAuth, authWithGoogle} = useContext(AuthContext)
   const login = async (e) => {
     e.preventDefault();
     const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     try {
       if (email !== "" && password !== "") {
-        auth
-          .signInWithEmailAndPassword(email, password)
-          .then((res) => {
-            navigate("/");
-          })
-          .catch((error) => {
-            setErrMsg("invalid email", error);
-          });
+        LoginAuth(email,password)
+        navigate("/");
+        // auth
+        //   .signInWithEmailAndPassword(email, password)
+        //   .then((res) => {
+        //     navigate("/");
+        //   })
+        //   .catch((error) => {
+        //     setErrMsg("invalid email", error);
+        //   });
       }
       if (email === "" && password === "") {
         setErrMsg("password and email is requird");
@@ -32,12 +36,14 @@ function Login() {
         setErrMsg("");
       }
     } catch (err) {
-      alert(err);
-    }
+      setErrMsg("invalid email", err);    }
   };
   const disbleError = () => {
     setErrMsg("");
   };
+  const google=()=>{
+    authWithGoogle()
+  }
 
   return (
     <div className="authenticon">
@@ -99,6 +105,7 @@ function Login() {
               bgcolor="#ddd"
               borderColor="1px solid  rgb(109, 115, 120)"
               color="rgb(109, 115, 120)"
+              handleClick={google}
               d="M24 12.2724C24 11.4216 23.9216 10.6044 23.7771 9.81836H12.2449V14.46H18.8351C18.6987 15.1942 18.4118 15.8937 17.9917 16.5162C17.5716 17.1386 17.0271 17.6712 16.391 18.0816V21.0936H20.3486C22.6641 19.0032 24 15.9276 24 12.2736V12.2724Z"
               d2="M12.2449 23.9999C15.551 23.9999 18.3233 22.9259 20.3486 21.0923L16.391 18.0815C15.2951 18.8015 13.8931 19.2275 12.2449 19.2275C9.0551 19.2275 6.3551 17.1155 5.39388 14.2799H1.30286V17.3879C2.32164 19.376 3.88454 21.0473 5.81685 22.2149C7.74917 23.3826 9.97477 24.0006 12.2449 23.9999Z"
               d3="M5.39388 14.2801C5.14898 13.5601 5.00939 12.7921 5.00939 12.0001C5.00939 11.2081 5.14898 10.4401 5.39388 9.72006V6.61206H1.30286C0.445732 8.28391 -0.000440122 10.1291 3.25781e-07 12.0001C3.25781e-07 13.9369 0.472653 15.7681 1.30286 17.3881L5.39265 14.2801H5.39388Z"

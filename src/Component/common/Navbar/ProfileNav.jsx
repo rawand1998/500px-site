@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import userprofile from "../../../images/userprofile.png";
 import {Link} from 'react-router-dom'
 import "./style.css";
 import {auth} from '../../../firebase/firebase'
+import {AuthContext} from '../../../context/auth'
 function ProfileNav() {
   const [menu, setMenu] = useState(false);
+  const {logout,idUser} = useContext(AuthContext)
+  console.log(idUser,"nav");
   const showmenu = () => {
     setMenu(!menu);
-    console.log(menu,"menu");
   };
-  const logout = ()=>{
-    auth.signOut()
+  const logouts = (e)=>{
+    e.preventDefault();
+    logout()
   }
   return (
     <div className="profile_nav_profile_auth">
@@ -19,8 +22,8 @@ function ProfileNav() {
         <img src={userprofile} alt="" onClick={showmenu} />
         <h1>{menu ? <div className="img_menu">
           <ul>
-            <Link to="/profile">Profile</Link>
-            <Link to="" onClick={logout}>Logout</Link>
+            <Link to={`/profile/${idUser}`}>Profile</Link>
+            <Link to="" onClick={logouts}>Logout</Link>
           </ul>
         </div>:""}</h1>
       </div>

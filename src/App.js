@@ -11,12 +11,7 @@ import RegisterWithEmail from "./Component/auth/RegisterWithEmail";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
 // import {auth} from './firebase/firebase'
 function App() {
-  const auth = getAuth();
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      console.log("true");
-    }
-  });
+
   return (
     <BrowserRouter>
       <NavBar />
@@ -25,7 +20,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="popular" element={<Popular />} />
-        <Route path="profile" element={<Portofilio />} />
+        <Route path="profile/:id" element={<Portofilio />} />
         <Route path="registerform" element={<RegisterWithEmail />} />
       </Routes>
     </BrowserRouter>
