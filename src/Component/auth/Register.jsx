@@ -7,16 +7,15 @@ import { AuthContext } from "../../context/auth";
 
 function Register() {
   const navigate = useNavigate();
-  const { authWithGoogle, authWithApple, authWithFaceBook } =
-    useContext(AuthContext);
+  const { authWithGoogle, error } = useContext(AuthContext);
   const authRegister = () => {
-    navigate('/registerform')
+    navigate("/registerform");
   };
   const authRegisterGoogle = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     console.log("goole");
     authWithGoogle();
-    navigate('/')
+    navigate("/");
   };
   const authRegisterFacebook = () => {
     // authWithFaceBook();
@@ -71,7 +70,6 @@ function Register() {
               handleClick={authRegisterGoogle}
             />
           </div>
-
           <div className="sign_up_para_register">
             <div className="checkbox">
               <input type="checkbox" />

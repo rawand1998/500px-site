@@ -1,56 +1,57 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import ButtonAuth from "../common/Button/ButtonAuth";
 import { useNavigate } from "react-router-dom";
-
-import "./style.css";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
-import firebase from "firebase/compat/app";
-import {AuthContext} from '../../context/auth'
+import "./style.css";
+
 function RegisterWithEmail() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  const [errMsg, setErrMsg] = useState("");
-const {RegisterAuth} = useContext(AuthContext)
   const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  const [errMsg, setErrMsg] = useState("");
+
   const authRegister = async (e) => {
     e.preventDefault();
     try {
+      console.log("try ignup");
       if (email !== "" && password !== "") {
-       RegisterAuth(email,password)
-       navigate("/login");
-        // auth
-        //   .createUserWithEmailAndPassword(email, password)
-        //   .then((res) => {
-        //     let email = res.user.email;
-        //     const result = email.split("@")[0];
-        //   const user=  firebase.auth().currentUser;
-        //     user.updateProfile({
-        //       displayName: "Jane Q. User",
-        //       photoURL: "https://example.com/jane-q-user/profile.jpg",
-        //     });
-        //     console.log(res.user.displayName);
-        //   })
-
-        //   .then(() => {
-        //     navigate("/");
-        //   });
+        auth
+          .createUserWithEmailAndPassword(email, password)
+          .then(({ user }) => {
+            console.log(user);
+            // let email = res.user.email;
+            // let result = email.split("@")[0];
+            // setIfLogin(true);
+            // setUserId(res.user.uid);
+            // setUserName(result);
+            // db.collection("user").add({
+            //   user_id: res.user.uid,
+            //   name: result,
+            // });
+          })
+          .catch((err) => {
+            console.log("err: ", err);
+            setErrMsg("Email already exists !");
+          });
+        // navigate("/login");
       }
-      if (email === "" && password === "") {
-        setErrMsg("password and email is requird");
-      } else if (email !== emailFormat) {
-        setErrMsg(" format eoor");
-      } else if (password.length < 4) {
-        setErrMsg("password weak");
-      } else {
-        setErrMsg("");
-      }
+      // if (email === "" && password === "") {
+      //   setErrMsg("password and email is requird");
+      // } else if (email !== emailFormat) {
+      //   setErrMsg(" format eoor");
+      // } else if (password.length < 4) {
+      //   setErrMsg("password weak");
+      // } else {
+      //   setErrMsg("");
+      // }
     } catch (err) {
+      console.log("err====");
       console.log(err);
     }
   };
+
   const disbleError = () => {
     setErrMsg("");
   };
@@ -58,7 +59,7 @@ const {RegisterAuth} = useContext(AuthContext)
   return (
     <div className="authenticon">
       <div className="auth_conatiner">
-        <form action="" className="form">
+        <form onSubmit={authRegister} className="form">
           <span>Sign up to 500px</span>
           <div className="input">
             <label htmlFor="">Email or Username*</label>
@@ -89,7 +90,6 @@ const {RegisterAuth} = useContext(AuthContext)
             bgcolor="rgb(8, 112, 209)"
             borderColor="rgb(8, 112, 209)"
             color="rgb(255, 255, 255)"
-            handleClick={authRegister}
           />
 
           <div className="sign_up_para">

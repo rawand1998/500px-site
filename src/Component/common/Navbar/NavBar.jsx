@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaMixer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -10,23 +10,13 @@ import googlePaly from "../../../images/google play.jpg";
 import appStore from "../../../images/app store.png";
 import firebase from "firebase/compat/app";
 import { auth } from "../../../firebase/firebase";
-import {AuthContext} from '../../../context/auth'
+import { AuthContext } from "../../../context/auth";
 function NavBar() {
   const navigate = useNavigate();
   const [authUser, setAuthUser] = useState();
   const [visible, setVisible] = useState(false);
   const [widthScreen, setWidthScreen] = useState(0);
-  // var user = firebase.auth().currentUser;
-  const {ifLogin} = useContext(AuthContext)
-  // useEffect(() => {
-  //   if (user) {
-  //     setAuthUser(true);
-  //     console.log(user.displayName)
-  //     console.log(auth.currentUser);
-  //   } else {
-  //     setAuthUser(false);
-  //   }
-  // }, [authUser]);
+  const { ifLogin, logout, idUser } = useContext(AuthContext);
 
   const changeVisible = () => {
     setVisible(!visible);
@@ -45,6 +35,9 @@ function NavBar() {
   }, []);
   const homePage = () => {
     navigate("/");
+  };
+  const logouts = () => {
+    logout();
   };
   return (
     <div>
@@ -134,14 +127,7 @@ function NavBar() {
               <FaSearch className="icon_search_nav" />
               <input placeholder="Search 500px" className="search_input" />
             </div>
-            {/* <div className="auth_btn">
-                    <Link className="auth login" to="/login">
-                      Login
-                    </Link>
-                    <Link className="auth register" to="/register">
-                      Sign up
-                    </Link>
-                  </div> */}
+
             {ifLogin ? (
               <ProfileNav />
             ) : (
@@ -160,47 +146,99 @@ function NavBar() {
 
       {visible ? (
         <div className="right_side_mod">
-          <div className="bowl_menu_mod">
+          {ifLogin ? (
             <ul className="navbar_menu_mode">
               <li>
-                <Link to="popular">Discover </Link>
+                <Link to={`/profile/${idUser}`} onClick={changeVisible}>
+                  Profile{" "}
+                </Link>
               </li>
               <li>
-                <Link to="/clients">Licensing</Link>
+                <Link to="" onClick={logouts}>
+                  Logout
+                </Link>
               </li>
               <li>
-                <Link to="/about">
+                <Link to="/about" onClick={changeVisible}>
                   NFT VAULT <span className="beta">BETA</span>
                 </Link>
               </li>
-
               <li>
-                <Link to="/enterprise">Memberships</Link>
-              </li>
-
-              <li>
-                <Link className="btns_nav_ discover" to="/register">
-                  Quests
-                </Link>
-              </li>
-
-              <li>
-                <Link className="btns_nav_ discover" to="/blog">
-                  Blog
+                <Link to="/about" onClick={changeVisible}>
+                  Perks
                 </Link>
               </li>
               <li>
-                <Link className="btns_nav_ discover" to="/register">
-                  Register
-                </Link>
-              </li>
-              <li>
-                <Link className="btns_nav_ discover" to="/login">
-                  Login
+                <Link to="/about" onClick={changeVisible}>
+                  Membership
                 </Link>
               </li>
             </ul>
-          </div>
+          ) : (
+            <div className="bowl_menu_mod">
+              <ul className="navbar_menu_mode">
+                <li>
+                  <Link to="popular" onClick={changeVisible}>
+                    Discover{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/clients" onClick={changeVisible}>
+                    Licensing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about" onClick={changeVisible}>
+                    NFT VAULT <span className="beta">BETA</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/enterprise" onClick={changeVisible}>
+                    Memberships
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    className="btns_nav_ discover"
+                    to="/register"
+                    onClick={changeVisible}
+                  >
+                    Quests
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    className="btns_nav_ discover"
+                    to="/blog"
+                    onClick={changeVisible}
+                  >
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="btns_nav_ discover"
+                    to="/register"
+                    onClick={changeVisible}
+                  >
+                    Register
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="btns_nav_ discover"
+                    to="/login"
+                    onClick={changeVisible}
+                  >
+                    Login
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
           <div className="width_footer">
             <div className="social_btns">
               <a>

@@ -16,38 +16,27 @@ function AuthProviders({ children }) {
   const [userName, setUserName] = useState("");
   const [ifLogin, setIfLogin] = useState(false);
   const [idUser, setUserId] = useState("");
+  const [error, setError] = useState("");
   onAuthStateChanged(auth, (user) => {
     if (user) {
       setIfLogin(true);
       setUserId(user.uid);
     }
   });
-  const RegisterAuth = async (email, password) => {
-    try {
-      auth.createUserWithEmailAndPassword(email, password).then((res) => {
-        let email = res.user.email;
-        let result = email.split("@")[0];
-        setIfLogin(true);
-        setUserId(res.user.uid);
-        setUserName(result);
-        db.collection("user").add({
-          user_id: res.user.uid,
-          name: result,
-        });
-     
-      });
-    } catch (err) {
-      console.error(err, "err");
-    }
-  };
+
   const getName = (id) => {
     console.log(id);
-   
+
     try {
       db.collection("user")
         .where("user_id", "==", id)
-        .get().then((res)=>console.log(res.docs.map((data)=>console.log(data,"data")),"res"))
-      
+        .get()
+        .then((res) =>
+          console.log(
+            res.docs.map((data) => console.log(data, "data")),
+            "res"
+          )
+        );
     } catch (err) {
       console.log(err);
     }
@@ -57,30 +46,35 @@ function AuthProviders({ children }) {
       auth.signInWithEmailAndPassword(email, password).then((res) => {
         let email = res.user.email;
         let result = email.split("@")[0];
-         setUserName(result);
+        setUserName(result);
       });
     } catch (err) {
       console.log(err, "err");
+      setError("Email doesn`t exists !");
     }
   };
   const authWithApple = () => {
     signInWithPopup(auth, providerApple);
   };
-  const authWithGoogle = (e) => {
-    signInWithPopup(auth, provider);
+  const authWithGoogle = () => {
+    try {
+      signInWithPopup(auth, provider);
+    } catch (err) {
+      console.log(err);
+    }
   };
   const authWithFaceBook = () => {
     signInWithPopup(auth, providerFacebook);
   };
   const logout = () => {
-    auth.signOut();
-    setIfLogin(false);
+    auth.signOut().then(() => {
+      setIfLogin(false);
+    });
   };
 
   return (
     <AuthContext.Provider
       value={{
-        RegisterAuth,
         LoginAuth,
         authWithGoogle,
         authWithApple,
@@ -90,6 +84,7 @@ function AuthProviders({ children }) {
         logout,
         getName,
         idUser,
+        error,
       }}
     >
       {children}
