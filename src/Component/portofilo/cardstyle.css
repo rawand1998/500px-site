@@ -7,7 +7,6 @@
   width: 600px;
   min-height: 290px;
   padding: 24px 16px;
-  /* margin-top: -100px; */
 }
 .cardPhoto .para {
   font-size: 20px;
@@ -20,10 +19,11 @@
   font-weight: bold;
 }
 .cardPhoto .para_photo{
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 100;
   color: rgb(255, 255, 255);
+  text-align: center;
 }
 .cardPhoto .button_profile {
   display: inline-flex;
@@ -62,14 +62,14 @@
     justify-content: center;
 }
 .para_cat{
-    font-size: 24px;
+    font-size: 21px;
     line-height: 24px;
     font-weight: bold;
     color: var(--black-color);
     padding: 20px 15px;
 }
 .para_cats{
-    font-size: 20px;
+    font-size: 16px;
     line-height: 20px;
     color: var(--black-color);
     text-align: center;

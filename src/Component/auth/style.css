@@ -50,7 +50,7 @@
 .input {
   display: flex;
   flex-direction: column;
-  height: 80px;
+  height: 65px;
 }
 .btns_auth {
   margin-top: 25px;

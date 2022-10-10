@@ -1,4 +1,4 @@
-.profile_container {
+/* .profile_container {
   padding-top: 8%;
   height: 1000px;
 }
@@ -89,4 +89,93 @@
 .para_cat_edit {
   padding: 15px;
   color: #f00;
+} */
+
+.first_div {
+  word-break: break-word;
+  max-width: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 32px;
+  position: relative;
+}
+.arrow {
+  position: absolute;
+  left: 50px;
+}
+
+.user_profile_img {
+  position: absolute;
+  bottom: -150px;
+}
+.user_profile_img .pro {
+  position: absolute;
+  bottom: -9px;
+  color: white;
+  background: rgb(34, 34, 34);
+  font-size: 12px;
+  padding: 0px 8px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  left: 30px;
+}
+.second_div {
+  padding-left: 64px;
+  padding-right: 64px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+}
+.pro_icon {
+  word-break: break-word;
+  max-width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+  display: flex;
+  margin-bottom: 16px;
+  margin-top: 8%;
+  width: 15%;
+  cursor: pointer;
+}
+.pro_icon svg:hover {
+  background-color: rgba(34, 34, 34, 0.1);
+  border-radius: 50px;
+  padding: 8px;
+}
+.third_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 35px;
+}
+.user_name{
+  font-weight: bold;
+  font-size: 20px;
+}
+.pro_followers span{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.profile_menu_content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(247, 248, 250);
+  height: 700px;
+  padding: 50px 0px;
+}
+.right_list_popular ul li {
+  font-weight: bold;
+  color: rgb(109, 115, 120);
+  font-size: 16px;
 }
