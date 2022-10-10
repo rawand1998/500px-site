@@ -13,7 +13,7 @@ function Header() {
         <span>
           Get inspired with incredible photos from diverse styles and genres
           around the <br />
-          world. We're not guided by fads—just great <br />
+          world. We're not guided by fads—just great 
           photography.
         </span>
         <Link className="button btn" to="/register">Sign up</Link>
