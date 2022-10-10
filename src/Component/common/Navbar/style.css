@@ -1,16 +1,14 @@
 .navbar_conatiner {
   display: flex;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 72px;
 }
 .bowl_menu {
   display: flex;
   align-items: center;
-  /* width: 900px; */
-  /* padding-top: 5px; */
 }
 .navbar_menu {
   display: flex;
@@ -23,11 +21,13 @@
   font-size: 20px;
   display: flex;
   align-items: center;
+  font-size: 16px;
 }
 
 .navbar_menu li a:hover {
   color: #7fc1ff;
 }
+
 .search_input {
   border: none;
   border-radius: var(--border);
@@ -36,9 +36,10 @@
   font-size: var(--text-size);
   height: 40px;
   text-indent: 48px;
+  outline: none;
 }
 .auth {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: var(--black-color);
   text-decoration: none;
@@ -50,15 +51,22 @@
   align-items: center;
 }
 .register {
-  border: 3px solid var(--black-color);
-  border-radius: var(--border);
-  padding: 10px 28px;
+  border: 2px solid var(--black-color);
+  border-radius: 100px;
+  padding: 0px 16px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
 }
 .auth_btn {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  font-size: 16px;
 }
 .menu {
   display: flex;
@@ -83,20 +91,30 @@
 }
 .logo svg {
   width: 100px;
-
   height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.logo svg:hover{
+  color: rgb(41, 134, 247)
 }
 .beta {
   border: none;
   border-radius: 4px;
   background-color: #7fc1ff;
-  padding: 3px;
+  padding: 2px 6px;
+  line-height: 16px;
   color: var(--black-color);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: bold;
+
+}
+.svg_hover:hover{
+  color: #f00;
 }
 .search_input_icon {
   position: relative;
@@ -104,10 +122,10 @@
 .icon_search_nav {
   position: absolute;
   left: 15px;
-  bottom: 20%;
+  bottom: 32%;
   color: var(--black-color);
-  height: 20px;
-  width: 20px;
+  width: 16px;
+  height: 16px;
   color: #3a3a3a;
 }
 /* profile navbar */
