@@ -5,6 +5,7 @@ function Header() {
   return (
     <div className="header_conatiner">
       <div className="header_content">
+        <div className="inner_header">
         <h1>
           Discover and share
           the  <br />world’s best 
@@ -17,13 +18,15 @@ function Header() {
           photography.
         </span>
         <Link className="button btn" to="/register">Sign up</Link>
+        </div>
+       
       </div>
       <div className="white_bg">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="1440"
-          height="128"
-          viewBox="0 0 1440 128"
+          width="100%"
+          height="110"
+          viewBox="0 0 100% 110"
         >
           <path
             class="header-wave"
