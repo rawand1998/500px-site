@@ -58,8 +58,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  
 }
 .auth_btn {
   width: 50%;
@@ -67,6 +65,11 @@
   align-items: center;
   justify-content: space-evenly;
   font-size: 16px;
+}
+.login_right {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
 }
 .menu {
   display: flex;
@@ -97,8 +100,8 @@
   align-items: center;
   cursor: pointer;
 }
-.logo svg:hover{
-  color: rgb(41, 134, 247)
+.logo svg:hover {
+  color: rgb(41, 134, 247);
 }
 .beta {
   border: none;
@@ -111,11 +114,8 @@
   font-size: 12px;
   margin-left: 5px;
   font-weight: bold;
+}
 
-}
-.svg_hover:hover{
-  color: #f00;
-}
 .search_input_icon {
   position: relative;
 }
@@ -123,17 +123,23 @@
   position: absolute;
   left: 15px;
   bottom: 32%;
-  color: var(--black-color);
+
   width: 16px;
   height: 16px;
   color: #3a3a3a;
+}
+.icon_profile {
+  position: absolute;
+  left: 15px;
+  bottom: 40%;
 }
 /* profile navbar */
 .profile_nav_profile_auth {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 60%;
+  width: 100%;
+  /* background-color: #f00; */
 }
 .profile_nav_profile_auth img {
   width: 30px;
@@ -142,14 +148,21 @@
 
 .profile_btns {
   border: var(--border);
-  display: flex;
+
   border: 2px solid var(--black-color);
-  border-radius: 50px;
-  align-items: center;
-  padding: 10px 25px;
-  width: 50%;
-  font-size: 18px;
+  border-radius: 28px;
+
   background-color: #fff;
+  padding: 10px 22px 10px 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  max-height: 48px;
 }
 
 .bowl_menu_mod {
@@ -206,6 +219,10 @@
   border-right: 10px solid transparent;
   border-bottom: 10px solid rgb(255, 255, 255);
   filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px -2px 1px);
+
+}
+.menus_add{
+  margin-left: -2px;
 }
 .img_menus {
   position: relative;
@@ -215,23 +232,24 @@
   flex-direction: column;
 }
 .img_menu ul a {
-  font-size: 20px;
-  line-height: 35px;
+  font-size: 14px;
   color: var(--black-color);
-  padding: 5px 10px;
   font-weight: 100;
+  padding-left: 16px;
+  padding-right: 32px;
+  line-height: 36px;
+
 }
 .img_menu ul a:hover {
   background-color: rgb(41, 134, 247);
   color: #fff;
 }
 
-.red_point{
+.red_point {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: rgb(255, 76, 76);
   position: absolute;
-right: 14%;
-
+  right: 14%;
 }
