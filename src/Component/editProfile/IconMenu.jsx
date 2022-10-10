@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
-function IconMenu({ eye, setEye, menu, showMenu }) {
+
+const  IconMenu=({ eye, setEye, menu, showMenu })=> {
   const [check, setCheck] = useState(false);
   const showCheck = () => {
     setCheck(!check);
@@ -37,5 +38,14 @@ function IconMenu({ eye, setEye, menu, showMenu }) {
     </div>
   );
 }
-
-export default IconMenu;
+const UploadImg =()=>{
+  <div className="upload_container">
+        <div className="img_menu">
+          <ul>
+            <li>Upload Image</li>
+            <li>Chose Image From Libaray</li>
+          </ul>
+        </div>
+  </div>
+}
+export  {IconMenu,UploadImg};

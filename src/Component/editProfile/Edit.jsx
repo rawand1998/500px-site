@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import IconMenu from "./IconMenu";
+import {IconMenu} from "./IconMenu";
 
 function Edit({ data }) {
   const { name, eye1, eye2, show, hide, icon, arrow } = data;

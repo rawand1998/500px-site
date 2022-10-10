@@ -6,6 +6,7 @@ import "./style.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { CardEdit } from "../portofilo/ProfileCard";
 import Edit from "./Edit";
+import { UploadImg } from "./IconMenu";
 
 function EditProfile() {
   const table = [
@@ -78,18 +79,25 @@ function EditProfile() {
   ];
   const [file, setFile] = useState();
   const [showImag, setshowImag] = useState(false);
+  const [menu, showMenu] = useState(false);
+  const [choseFile,setChoseFile]= useState(false)
 
   function handleChange(e) {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
-    console.log(file,"file");
-    setshowImag(!showImag)
-    console.log(showImag,"handel change");
-}
-const showInput =()=>{
-  setshowImag(!showImag)
-  console.log("hi");
-}
+    console.log(file, "file");
+    setshowImag(!showImag);
+    setChoseFile(true)
+  }
+  const showInput = () => {
+    setshowImag(!showImag);
+    console.log("hi");
+  };
+  const changeIcon = () => {
+    showMenu(true);
+    console.log(menu);
+  };
+
   return (
     <div className="edit_container">
       <div className="edit_lable">
@@ -98,17 +106,27 @@ const showInput =()=>{
       <div className="edit">
         <div className="first_banner">
           <div className="cover_imgs">
-            <div className="change_img_cover">
+            <div className="change_img_cover" onClick={changeIcon}>
               <FaCamera />
-              Change cover photo{" "}
+              Change cover photo
             </div>
           </div>
+
           <div className="banner_user_img">
             <div className="avator_profile">
-          {!showImag ? <img src={file} alt="" className="imges_edit_user" onClick={showInput} />:<img src={user} alt="" className="imges_edit_user"  />}
-            
-           {showImag ? <input type="file" onChange={handleChange}  /> :  ""} 
-   
+              {!showImag ? (
+                <img
+                  src={choseFile ? file : user }
+                  alt=""
+                  className="imges_edit_user"
+                  onClick={showInput}
+                />
+              ) : (
+                <img src={user} alt="" className="imges_edit_user" />
+              )}
+
+              {showImag ? <input type="file" onChange={handleChange} /> : ""}
+
               <Link to="">pro</Link>
             </div>
           </div>

@@ -210,6 +210,9 @@
   height: 120px;
   border-radius: 50%;
 }
+.upload_container{
+  background-color: #f00;
+}
 
 @media screen and (min-width: 600px) and (max-width: 1440px) {
   .form_profile_edit {
