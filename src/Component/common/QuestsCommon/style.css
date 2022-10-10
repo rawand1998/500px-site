@@ -23,7 +23,7 @@
   line-height: 30px;
   color: var(--black-color);
 }
-@media screen and (min-width: 600px) and (max-width: 1440px) {
+@media screen and (min-width: 600px) and (max-width: 992px) {
   .quest_common_container {
     flex-direction: column;
     height: 900px;

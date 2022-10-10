@@ -7,7 +7,7 @@ function CommonSection({ d, title, cover, d2, coverImg, photoBy ,svgColor}) {
       style={{ backgroundImage: `url(${cover})` }}
     >
       <div className="cover_img" style={{ backgroundColor: `${coverImg}` }}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill={svgColor}>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill={svgColor} >
           <path d={d}></path>
           <path d={d2}></path>
         </svg>

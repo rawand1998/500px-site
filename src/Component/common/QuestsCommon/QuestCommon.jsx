@@ -6,7 +6,7 @@ function QuestCommon({ img, d, title, descripton, btn ,d2}) {
    
       <div className="content_quest">
         <div className="svg">
-        <svg height="64px" width="64px" viewBox="0 0 24 24">
+        <svg height="64px" width="64px" viewBox="0 0 24 24" >
           <path d={d}></path>
           <path d={d2}></path>
         </svg>

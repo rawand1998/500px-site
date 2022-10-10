@@ -31,7 +31,7 @@
 .title_name{
     line-height: 40px;
     font-weight: bold;
-    font-size: 64px;
+    font-size: 48px;
     color: rgb(255, 255, 255);
     padding-top: 25px;
     
@@ -42,4 +42,5 @@
     bottom: 0;
     color: #fff;
     padding-bottom: 5px;
+    font-size: 12px;
 }

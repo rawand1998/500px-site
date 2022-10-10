@@ -33,15 +33,16 @@ function Home() {
         title="Portfolio"
         cover="https://500px.com/staticV2/media/banner_portfolio_mobile.7edbc4fd.png"
         photoBy="Photo by Hayden Scott"
+        svgColor="#fff"
       />
       <ImageCommon
         title="Designed and built for photographers"
         descrition={
           <>
             Create your own high-quality website in minutes. Portfolios allows
-            <br />
-            you to share your work externally so you can build your own brand
-            <br />
+           
+            you to share your work externally so  <br />you can build your own brand
+      
             and market yourself as a professional photographer."
           </>
         }
@@ -56,15 +57,16 @@ function Home() {
         title="Resource Hub"
         cover="https://500px.com/staticV2/media/banner_resource_hub_mobile.c228af83.png"
         photoBy="Photo by Szabo Viktor"
+        svgColor="#fff"
       />
       <ImageCommon
         title="Discover something new"
         descrition={
           <>
             Browse videos, articles, workshops, and presets from 500px users to
-            <br />
-            discover new areas of photography and grow your skills. Become a Pro
-            <br />
+           
+            discover new areas of    <br />photography and grow your skills. Become a Pro
+      
             member to list your Resources in the Hub."
           </>
         }
