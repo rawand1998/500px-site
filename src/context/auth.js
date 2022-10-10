@@ -16,31 +16,14 @@ function AuthProviders({ children }) {
   const [userName, setUserName] = useState("");
   const [ifLogin, setIfLogin] = useState(false);
   const [idUser, setUserId] = useState("");
-  const [error,setError]=useState("")
+  const [error, setError] = useState("");
   onAuthStateChanged(auth, (user) => {
     if (user) {
       setIfLogin(true);
       setUserId(user.uid);
     }
   });
-  const RegisterAuth = async (email, password) => {
-    try {
-      auth.createUserWithEmailAndPassword(email, password).then((res) => {
-        let email = res.user.email;
-        let result = email.split("@")[0];
-        setIfLogin(true);
-        setUserId(res.user.uid);
-        setUserName(result);
-        db.collection("user").add({
-          user_id: res.user.uid,
-          name: result,
-        })
-       
-      });
-    } catch (err) {
-      setError("Email already exists !")
-    }
-  };
+
   const getName = (id) => {
     console.log(id);
 
@@ -67,7 +50,7 @@ function AuthProviders({ children }) {
       });
     } catch (err) {
       console.log(err, "err");
-      setError("Email doesn`t exists !")
+      setError("Email doesn`t exists !");
     }
   };
   const authWithApple = () => {
@@ -92,7 +75,6 @@ function AuthProviders({ children }) {
   return (
     <AuthContext.Provider
       value={{
-        RegisterAuth,
         LoginAuth,
         authWithGoogle,
         authWithApple,
@@ -102,7 +84,7 @@ function AuthProviders({ children }) {
         logout,
         getName,
         idUser,
-        error
+        error,
       }}
     >
       {children}

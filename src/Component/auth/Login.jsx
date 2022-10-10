@@ -12,7 +12,7 @@ function Login() {
   const navigate = useNavigate();
   const [errMsg, setErrMsg] = useState("");
   const [successs, setSucess] = useState("");
-  const {LoginAuth, authWithGoogle} = useContext(AuthContext)
+  const {LoginAuth, authWithGoogle,error} = useContext(AuthContext)
   const login = async (e) => {
     e.preventDefault();
     const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -20,17 +20,8 @@ function Login() {
       if (email !== "" && password !== "") {
         LoginAuth(email,password)
         navigate("/");
-        setSucess("Login Success")
-        // auth
-        //   .signInWithEmailAndPassword(email, password)
-        //   .then((res) => {
-        //     navigate("/");
-        //   })
-        //   .catch((error) => {
-        //     setErrMsg("invalid email", error);
-        //   });
       }
-      if (email === "" && password === "") {
+      if (email === "" || password === "") {
         setErrMsg("password and email is requird");
       } else if (email !== emailFormat) {
         setErrMsg("email format eoor");
