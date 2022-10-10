@@ -76,7 +76,20 @@ function EditProfile() {
       hide: "hide",
     },
   ];
+  const [file, setFile] = useState();
+  const [showImag, setshowImag] = useState(false);
 
+  function handleChange(e) {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+    console.log(file,"file");
+    setshowImag(!showImag)
+    console.log(showImag,"handel change");
+}
+const showInput =()=>{
+  setshowImag(!showImag)
+  console.log("hi");
+}
   return (
     <div className="edit_container">
       <div className="edit_lable">
@@ -92,7 +105,10 @@ function EditProfile() {
           </div>
           <div className="banner_user_img">
             <div className="avator_profile">
-              <img src={user} alt="" />
+          {!showImag ? <img src={file} alt="" className="imges_edit_user" onClick={showInput} />:<img src={user} alt="" className="imges_edit_user"  />}
+            
+           {showImag ? <input type="file" onChange={handleChange}  /> :  ""} 
+   
               <Link to="">pro</Link>
             </div>
           </div>

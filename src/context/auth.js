@@ -16,6 +16,7 @@ function AuthProviders({ children }) {
   const [userName, setUserName] = useState("");
   const [ifLogin, setIfLogin] = useState(false);
   const [idUser, setUserId] = useState("");
+  const [error,setError]=useState("")
   onAuthStateChanged(auth, (user) => {
     if (user) {
       setIfLogin(true);
@@ -33,10 +34,11 @@ function AuthProviders({ children }) {
         db.collection("user").add({
           user_id: res.user.uid,
           name: result,
-        });
+        })
+       
       });
     } catch (err) {
-      console.error(err, "err");
+      setError("Email already exists !")
     }
   };
   const getName = (id) => {
@@ -65,6 +67,7 @@ function AuthProviders({ children }) {
       });
     } catch (err) {
       console.log(err, "err");
+      setError("Email doesn`t exists !")
     }
   };
   const authWithApple = () => {
@@ -99,6 +102,7 @@ function AuthProviders({ children }) {
         logout,
         getName,
         idUser,
+        error
       }}
     >
       {children}

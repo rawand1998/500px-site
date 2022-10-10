@@ -57,7 +57,7 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .input_edit_profile {
   display: flex;
@@ -109,7 +109,6 @@
 .edit_advertisment {
   word-break: break-word;
   max-width: 100%;
-
   align-items: center;
   justify-content: space-evenly;
   display: flex;
@@ -134,7 +133,6 @@
   align-items: center;
   padding-top: 2px;
   justify-content: space-between;
-  /* height: 900px; */
 }
 .edit_banner1 {
   width: 100%;
@@ -205,6 +203,12 @@
 }
 .last_para span > span {
   color: rgb(8, 112, 209);
+}
+.imges_edit_user
+{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 600px) and (max-width: 1440px) {

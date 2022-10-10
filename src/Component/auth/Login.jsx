@@ -11,6 +11,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [errMsg, setErrMsg] = useState("");
+  const [successs, setSucess] = useState("");
   const {LoginAuth, authWithGoogle} = useContext(AuthContext)
   const login = async (e) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ function Login() {
       if (email !== "" && password !== "") {
         LoginAuth(email,password)
         navigate("/");
+        setSucess("Login Success")
         // auth
         //   .signInWithEmailAndPassword(email, password)
         //   .then((res) => {
@@ -112,6 +114,7 @@ function Login() {
               d4="M12.2449 4.7724C14.0424 4.7724 15.6563 5.3784 16.9261 6.5676L20.438 3.126C18.3171 1.188 15.5449 0 12.2449 0C7.45714 0 3.31837 2.688 1.30286 6.612L5.39265 9.72C6.35755 6.8832 9.05632 4.7724 12.2449 4.7724Z"
             />
           </div>
+          {successs}
           <div className="sign_up_para">
             <span>
               Don`t have a account ?
