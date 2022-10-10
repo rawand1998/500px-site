@@ -15,14 +15,14 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
-
+padding-left: 32px;
   width: 60%;
 }
 .scoicl_footer {
   width: 40%;
 }
 .span {
-  font-size: 24px;
+  font-size: 21px;
   line-height: 24px;
   font-weight: bold;
   text-transform: none;
@@ -44,7 +44,7 @@
   font-weight: normal;
   cursor: pointer;
   margin-bottom: 16px;
-  font-size: 20px;
+  font-size: 16px;
   color: rgb(109, 115, 120);
   line-height: 35px;
 }
@@ -71,17 +71,25 @@
   margin-left: 16px;
   font-size: 16px;
   color: rgb(109, 115, 120);
+
+}
+.footer_menu_terms a:hover{
+  color: rgb(41, 134, 247);
 }
 .logo_footer h4 {
-  font-size: 21px;
+  font-size: 18px;
   line-height: 24px;
   font-weight: bold;
   text-transform: none;
   margin: 0px;
   color: rgb(109, 115, 120);
+  cursor: pointer;
+}
+.logo_footer h4:hover{
+  color: rgb(41, 134, 247);
 }
 
-@media screen and (min-width: 600px) and (max-width: 1440px) {
+@media screen and (min-width: 600px) and (max-width: 992px) {
   .list_footer {
     flex-direction: column;
     height: 800px;

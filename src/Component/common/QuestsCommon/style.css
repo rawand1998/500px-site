@@ -1,9 +1,11 @@
 .quest_common_container {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 .content_quest {
   display: flex;
@@ -15,13 +17,22 @@
 .content_quest .ques_title {
   font-weight: var(--font-weight);
   color: var(--black-color);
-  line-height: 40px;
+  line-height: 48px;
   font-size: 36px;
 }
 .content_quest span {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
   color: var(--black-color);
+}
+.btn_quest{
+  width: 216px;
+}
+.img_quest{
+  width: 500px;
+}
+.img_quest img{
+  width: 100%;
 }
 @media screen and (min-width: 600px) and (max-width: 992px) {
   .quest_common_container {

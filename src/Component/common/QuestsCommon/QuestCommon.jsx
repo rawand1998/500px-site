@@ -14,7 +14,7 @@ function QuestCommon({ img, d, title, descripton, btn ,d2}) {
   
         <span className="ques_title">{title}</span>
         <span>{descripton}</span>
-        <button className="btn_common">{btn}</button>
+        <button className="btn_common btn_quest">{btn}</button>
       </div>
       <div className="img_quest">
         <img src={img} alt="" />
