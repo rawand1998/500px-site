@@ -1,11 +1,13 @@
 .quest_common_container {
   display: flex;
-  /* width: 100%; */
   justify-content: space-around;
   align-items: center;
   height: 80vh;
   padding-left: 64px;
   padding-right: 64px;
+}
+.quest_reverse{
+  flex-direction: row-reverse;
 }
 .content_quest {
   display: flex;

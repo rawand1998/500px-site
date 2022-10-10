@@ -46,7 +46,7 @@ padding-left: 32px;
   margin-bottom: 16px;
   font-size: 16px;
   color: rgb(109, 115, 120);
-  line-height: 35px;
+  line-height: 24px;
 }
 .list_content ul li:hover {
   color: rgb(41, 134, 247);
@@ -77,7 +77,7 @@ padding-left: 32px;
   color: rgb(41, 134, 247);
 }
 .logo_footer h4 {
-  font-size: 18px;
+  font-size: 21px;
   line-height: 24px;
   font-weight: bold;
   text-transform: none;
@@ -85,9 +85,7 @@ padding-left: 32px;
   color: rgb(109, 115, 120);
   cursor: pointer;
 }
-.logo_footer h4:hover{
-  color: rgb(41, 134, 247);
-}
+
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
   .list_footer {

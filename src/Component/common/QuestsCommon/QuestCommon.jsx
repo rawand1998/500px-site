@@ -1,8 +1,8 @@
 import React from "react";
 import './style.css'
-function QuestCommon({ img, d, title, descripton, btn ,d2}) {
+function QuestCommon({ img, d, title, descripton, btn ,d2,className}) {
   return (
-    <div className="quest_common_container">
+    <div className={className}>
    
       <div className="content_quest">
         <div className="svg">
