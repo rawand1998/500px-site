@@ -5,7 +5,14 @@
   justify-content: space-between;
   align-items: center;
   height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  width: 100%;
 }
+
 .bowl_menu {
   display: flex;
   align-items: center;
@@ -162,7 +169,7 @@
   text-align: center;
   max-height: 48px;
 }
-.profile_btns:hover{
+.profile_btns:hover {
   background-color: rgb(233, 233, 233);
 }
 .bowl_menu_mod {
@@ -217,9 +224,8 @@
   border-right: 10px solid transparent;
   border-bottom: 10px solid rgb(255, 255, 255);
   filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px -2px 1px);
-
 }
-.menus_add{
+.menus_add {
   margin-left: -2px;
 }
 .img_menus {
@@ -236,7 +242,6 @@
   padding-left: 16px;
   padding-right: 32px;
   line-height: 36px;
-
 }
 .img_menu ul a:hover {
   background-color: rgb(41, 134, 247);

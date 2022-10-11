@@ -1,23 +1,20 @@
 .image_section_conatiner {
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
   justify-content: center;
   align-items: center;
+  width: 95%;
+  gap: 5px;
+  margin: 0 auto;
 }
+
 .image_section_conatiner_single {
-  margin: 0px 8px;
-  position: relative;
-  max-width: 100%;
-  object-fit: cover;
-  margin-bottom: 16px;
 }
-.image_section_conatiner_single img {
-  margin-bottom: 15px;
-}
+
 .title_img {
   display: none;
 }
+
 .image_section_conatiner_single:hover .title_img {
   display: block;
   color: #fff;

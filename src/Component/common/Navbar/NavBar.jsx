@@ -9,7 +9,6 @@ import { AiOutlineMenu } from "react-icons/ai";
 import googlePaly from "../../../images/google play.jpg";
 import appStore from "../../../images/app store.png";
 import firebase from "firebase/compat/app";
-import { auth } from "../../../firebase/firebase";
 import { AuthContext } from "../../../context/auth";
 function NavBar() {
   const navigate = useNavigate();
@@ -43,7 +42,7 @@ function NavBar() {
     setMenu(!menu);
   };
   return (
-    <div>
+    <nav>
       {widthScreen < 1103 ? (
         <div className="menu_width">
           <div className="logo" onClick={homePage}>
@@ -363,7 +362,6 @@ function NavBar() {
           </div>
         </div>
       )}
-
       {visible ? (
         <div className="right_side_mod">
           {ifLogin ? (
@@ -481,7 +479,7 @@ function NavBar() {
           </div>
         </div>
       ) : null}
-    </div>
+    </nav>
   );
 }
 
