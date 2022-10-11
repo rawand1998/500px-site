@@ -67,19 +67,18 @@
 .features {
   padding-left: 55px;
 }
-.features .feature_label {
+ .feature_label {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
 }
-.dimss span {
+.para_dimss {
   line-height: 24px;
   font-size: 14px;
   color: rgb(109, 115, 120);
 }
 .dismiss_btn {
   border: none;
-  color: rgb(8, 112, 209);
   cursor: pointer;
   background-color: transparent;
   padding-left: 5px;
@@ -101,4 +100,12 @@
 }
 .view_banner span:hover {
   color: #0870d1;
+}
+.explore_section{
+  padding-left: 52px;
+  padding-right: 52px;
+}
+.feature_banner_text{
+  display: flex;
+  flex-direction: column;
 }

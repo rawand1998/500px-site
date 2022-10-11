@@ -20,7 +20,7 @@ function ProfileHome() {
           <div className="feature_banner_text">
             <span className="feature_label">Featured photographers</span>
             <div className="dimss">
-              <span>Follow to explore new work •</span>
+              <span className="para_dimss">Follow to explore new work •</span>
               <button className="dismiss_btn">Dismiss</button>
             </div>
           </div>
@@ -28,6 +28,14 @@ function ProfileHome() {
             <span>View all</span>
           </div>
         </div>
+      </div>
+      <div className="scroll"></div>
+      <div className="explore_section">
+      <div className="feature_banner_text">
+            <span className="feature_label">Explore the community</span>
+              <span className="para_dimss">Discover photos from all over the world</span>
+          
+          </div>
       </div>
     </>
   );
