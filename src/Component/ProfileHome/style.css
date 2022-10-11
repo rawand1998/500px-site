@@ -44,7 +44,7 @@
   text-align: center;
   color: rgb(34, 34, 34);
   border-bottom: 1px solid rgb(215, 216, 219);
-  padding: 0px 0px 16px;
+  padding: 10px 0px 16px;
   margin: 16px auto 0px;
 }
 .welcome_home span:nth-child(1) {
@@ -156,4 +156,10 @@
   width: 100%;
   height: 211px;
   object-fit: cover;
+}
+.section_bg{
+  padding: 0;
+  margin: 0;
+  margin-top: -1.2%;
+  background-color: #f7f8fa
 }

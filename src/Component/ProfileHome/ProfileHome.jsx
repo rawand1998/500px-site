@@ -11,6 +11,7 @@ function ProfileHome() {
           <Link>Home</Link>
         </div>
       </div>
+      <div className="section_bg">
       <div className="welcome_home">
         <span>Welcome to 500px</span>
         <span>Follow photographers to get started</span>
@@ -173,6 +174,7 @@ function ProfileHome() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
