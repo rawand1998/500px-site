@@ -19,7 +19,7 @@ function Login() {
     try {
       if (email !== "" && password !== "") {
         LoginAuth(email,password)
-        navigate("/");
+        navigate("/home");
       }
       if (email === "" || password === "") {
         setErrMsg("password and email is requird");
