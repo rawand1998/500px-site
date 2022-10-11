@@ -1,18 +1,9 @@
-.images_sections {
-  padding-left: 64px;
-  padding-right: 64px;
-}
-
 .image_section_conatiner {
   display: flex;
   flex-wrap: wrap;
   -webkit-box-pack: center;
   justify-content: center;
-  max-width: 1330px;
-  width: 100%;
-  margin: 0px auto;
   align-items: center;
-  padding-top: 25px;
 }
 .image_section_conatiner_single {
   margin: 0px 8px;
@@ -40,5 +31,4 @@
   background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 100%);
   padding: 5px 0px;
   font-size: 12px;
-
 }

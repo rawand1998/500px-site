@@ -33,7 +33,7 @@
   right: 50%;
   top: 68%;
 }
-.banner_user_img a{
+.banner_user_img a {
   position: absolute;
   left: 45px;
   position: absolute;
@@ -63,7 +63,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 .edit_lable {
   padding: 15px;
@@ -214,7 +213,7 @@
   width: 160px !important;
   height: 48px !important;
 }
-.edit_save:hover{
+.edit_save:hover {
   background-color: rgb(41, 134, 247);
   color: rgb(255, 255, 255);
 }
@@ -227,16 +226,15 @@
 .last_para span > span {
   color: rgb(8, 112, 209);
 }
-.imges_edit_user
-{
+.imges_edit_user {
   width: 120px;
   height: 120px;
   border-radius: 50%;
 }
-.upload_container{
+.upload_container {
   background-color: #f00;
 }
-.show_edit{
+.show_edit {
   font-size: 16px;
   font-weight: 100;
 }
@@ -300,6 +298,4 @@
   align-items: center;
   width: 100px;
   justify-content: space-around;
-
 }
-

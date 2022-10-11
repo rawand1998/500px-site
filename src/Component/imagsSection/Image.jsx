@@ -27,17 +27,16 @@ function Image() {
         descrition="Our editors are always on the lookout for jaw dropping content for you to discover and stay inspired. Check back weekly to see what’s new."
         btn="View Editor choice"
       />
-      <div className="images_sections">
-        <div className="image_section_conatiner">
-          {img.map(({ image, title }) => {
-            return (
-              <div className="image_section_conatiner_single">
-                <img src={image} alt="not found"/>
-                <span className="title_img">{title}</span>
-              </div>
-            );
-          })}
-        </div>
+
+      <div className="image_section_conatiner">
+        {img.map(({ image, title }) => {
+          return (
+            <div className="image_section_conatiner_single">
+              <img src={image} alt="not found" />
+              <span className="title_img">{title}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
