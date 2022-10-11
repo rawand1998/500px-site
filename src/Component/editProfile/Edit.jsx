@@ -16,7 +16,7 @@ function Edit({ data }) {
         <div className="left_content">
           {icon}
 
-          <span>{name}</span>
+          <span className="show_edit">{name}</span>
         </div>
         <div className="right_contents">
           <div className="right_content" onClick={changeIcon}>
@@ -35,7 +35,7 @@ function Edit({ data }) {
                 ></path>
               </svg>
             )}
-            {eye ? <span>{show}</span> : <span>{hide}</span>}
+            {eye ? <span className="show_edit">{show}</span> : <span className="show_edit">{hide}</span>}
 
             <svg width="24" height="24" viewBox="0 0 24 24">
               <path d={arrow}></path>

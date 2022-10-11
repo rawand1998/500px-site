@@ -29,19 +29,19 @@ const CardGalleries = ({ d, title, para, btn,classBtn }) => {
 
 const CardEdit = ({ d, title, para, d2, name }) => {
   return (
-    <div className="card_catergory">
-      <svg height="64" width="64" fill="#000" viewBox="0 0 24 24">
+    <div className="card_catergory CardEdit">
+      <svg height="48" width="48" fill="#000" viewBox="0 0 24 24">
         <path d={d}></path>
       </svg>
       <span className="para_cat">{title}</span>
       <span className="edit_pro">
-        <svg height="24" width="24" fill="#fff" viewBox="0 0 24 24">
+        <svg height="18" width="18" fill="#fff" viewBox="0 0 24 24">
           <path d={d2}></path>
         </svg>
         <span className="edit_pro_name">{name}</span>
       </span>
 
-      <span className="para_cats">{para}</span>
+      <span className="para_cats card_edit_para">{para}</span>
     </div>
   );
 };

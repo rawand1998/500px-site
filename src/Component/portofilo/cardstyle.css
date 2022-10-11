@@ -64,6 +64,10 @@
   max-width: 560px;
   margin: 0px auto;
 }
+.CardEdit{
+  padding: 0px 16px;
+  line-height: 15px;
+}
 .para_cat {
   font-size: 21px;
   /* line-height: 24px; */
@@ -146,4 +150,22 @@
   background-color: rgb(78, 78, 78);
   border-color: rgb(255, 255, 255);
   color: rgb(255, 255, 255);
+}
+
+.edit_pro{
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 34, 34);
+  padding: 0px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.card_edit_para
+{
+  line-height: 20px;
+  padding-top: 5px;
 }
