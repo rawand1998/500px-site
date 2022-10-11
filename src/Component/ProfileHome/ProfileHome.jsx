@@ -14,7 +14,20 @@ function ProfileHome() {
       <div className="welcome_home">
         <span>Welcome to 500px</span>
         <span>Follow photographers to get started</span>
-
+      </div>
+      <div className="features">
+        <div className="fearures_banner_one">
+          <div className="feature_banner_text">
+            <span className="feature_label">Featured photographers</span>
+            <div className="dimss">
+              <span>Follow to explore new work •</span>
+              <button className="dismiss_btn">Dismiss</button>
+            </div>
+          </div>
+          <div className="view_banner">
+            <span>View all</span>
+          </div>
+        </div>
       </div>
     </>
   );
