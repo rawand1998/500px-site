@@ -1,64 +1,75 @@
-.profile_container {
-  padding-top: 8%;
-  height: 1000px;
-}
-.avator_profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.first_div {
+  word-break: break-word;
+  max-width: 100%;
   width: 100%;
-}
-.profile_pro_icon {
-  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
-  align-items: center;
-}
-.profile_name {
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  width: 80%;
-}
-.profile_name span:nth-child(2) {
-  color: var(--black-color);
-  font-weight: var(--font-weight);
-  font-size: 20px;
-}
-.avator_profile {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 32px;
+  position: relative;
 }
-.avator_profile a {
-  background-color: var(--black-color);
-  color: #fff;
-  border-radius: 25px;
-  padding: 3px 9px;
-}
-.profile_name span {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: bold;
-  text-transform: none;
-  color: var(--black-color);
+.arrow {
+  position: absolute;
+  left: 50px;
 }
 
-.profile_icon {
-  align-items: flex-end;
-  justify-content: flex-end;
+.user_profile_img {
+  position: absolute;
+  bottom: -150px;
+}
+.user_profile_img .pro {
+  position: absolute;
+  bottom: -9px;
+  color: white;
+  background: rgb(34, 34, 34);
+  font-size: 12px;
+  padding: 0px 8px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  left: 30px;
+}
+.second_div {
+  padding-left: 64px;
+  padding-right: 64px;
   display: flex;
-  width: 95%;
+  justify-content: flex-end;
+  align-items: flex-end;
+
 }
-.profile_icon svg {
-  padding: 15px;
+.pro_icon {
+  word-break: break-word;
+  max-width: 100%;
+  justify-content: space-around;
+  align-items: flex-end;
+  display: flex;
+  margin-bottom: 16px;
+  margin-top: 8%;
+  width: 15%;
+  cursor: pointer;
 }
-.profile_icon svg:hover {
-  background-color: #ddd;
-  border-radius: 50%;
+.pro_icon svg:hover {
+  background-color: rgba(34, 34, 34, 0.1);
+  border-radius: 50px;
+  padding: 8px;
 }
-.profile_menu {
-  padding-top: 25px;
+.third_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 35px;
+}
+.user_name{
+  font-weight: bold;
+  font-size: 20px;
+}
+.pro_followers span{
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .profile_menu_content {
@@ -69,24 +80,10 @@
   width: 100%;
   background-color: rgb(247, 248, 250);
   height: 700px;
-  padding: 50px 0px;
+  /* padding: 70px 0px; */
 }
-
-.resume {
-  color: rgb(127, 193, 255);
-  font-weight: var(--font-weight);
-}
-.edit_pro {
-  display: flex;
-  align-items: center;
-  background-color: var(--black-color);
-  padding: 5px;
-  color: #fff;
+.right_list_popular ul li {
   font-weight: bold;
-  padding: 0px 12px;
-  border-radius: 4px;
-}
-.para_cat_edit {
-  padding: 15px;
-  color: #f00;
+  color: rgb(109, 115, 120);
+  font-size: 16px;
 }

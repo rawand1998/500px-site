@@ -6,14 +6,20 @@
   font-weight: var(--font-weight);
   border-radius: 28px;
   cursor: pointer;
-  height: 60px;
+  height: 50px;
   padding: 12px 22px;
   margin-top: 20px;
   font-size: 20px;
   width: 100%;
+  width: 350px;
 }
 .button_auth_common span {
-  width: 87%;
+  flex: 1 1 auto;
   text-align: center;
   font-weight: 100;
+  font-size: 16px !important;
+  font-weight: bold;
+}
+.button_auth_common:hover {
+  background-color: none;
 }

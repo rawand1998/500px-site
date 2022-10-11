@@ -4,10 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 400px;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
 }
 .common_container svg{
     height: 64px;
@@ -30,9 +31,9 @@
 .title_name{
     line-height: 40px;
     font-weight: bold;
-    text-transform: none;
-    font-size: 36px;
+    font-size: 48px;
     color: rgb(255, 255, 255);
+    padding-top: 25px;
     
 }
 .left_span{
@@ -41,4 +42,6 @@
     bottom: 0;
     color: #fff;
     padding-bottom: 5px;
+    font-size: 12px;
+    cursor: pointer;
 }

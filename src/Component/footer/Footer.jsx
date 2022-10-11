@@ -36,6 +36,7 @@ function Footer() {
             <ul>
               <li> About Licensing</li>
               <li>Submission requirements</li>
+              <li>Submission requirements</li>
               <li>Content types</li>
               <li>Distribution</li>
             </ul>
@@ -66,12 +67,13 @@ function Footer() {
         <div className="scoicl_footer">
           <span className="span">Company</span>
           <div className="social_btns">
+          <a>
+              <img src={appStore} alt="" />
+            </a>
             <a>
               <img src={googlePaly} alt="" />
             </a>
-            <a>
-              <img src={appStore} alt="" />
-            </a>
+          
           </div>
         </div>
       </div>

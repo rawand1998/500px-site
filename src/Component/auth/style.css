@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 .auth_conatiner span {
   text-align: center;
@@ -14,7 +13,6 @@
   background-color: rgb(247, 248, 250);
 }
 .form {
-  word-break: break-word;
   padding: 24px;
   width: 100vw;
   max-width: 440px;
@@ -23,9 +21,11 @@
   height: 650px;
   display: flex;
   flex-direction: column;
+  width: 370px;
+  margin-top: 25px;
 }
 .form label {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 100;
   color: rgb(109, 115, 120);
@@ -39,7 +39,7 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(215, 216, 219);
   border-radius: 4px;
-  height: 25px;
+  height: 20px;
   font-size: 16px;
   padding: 12px 16px;
   flex: 0 0 auto;
@@ -50,7 +50,7 @@
 .input {
   display: flex;
   flex-direction: column;
-  height: 100px;
+  height: 65px;
 }
 .btns_auth {
   margin-top: 25px;
@@ -67,14 +67,14 @@
 }
 .sign_up_para span {
   color: rgb(109, 115, 120);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 100;
 }
 .sign_up_para span a {
   color: rgb(8, 112, 209);
 }
 .forget_pass {
-  color: rgb(8, 112, 209);
+  color: rgb(8, 112, 209) !important;
   cursor: pointer;
 }
 .forget_pass:hover {
@@ -88,9 +88,27 @@
   padding-top: 25px;
 }
 .sign_up_para_register span {
-  color: var(--black-color);
-  font-size: 18px;
+  color: var(--black-color) !important;
+  font-size: 16px !important;
   font-weight: 100;
+  cursor: pointer;
+}
+.sign_up_para_register span a{
+  color: rgb(8, 112, 209) !important;
+}
+.register_form{
+  height: 502px;
+}
+.n_register{
+  height: 70px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+.n_register span:nth-child(1){
+  line-height: 0.4px;
+  font-size: 24px !important;
+  padding-top: 15px;
 }
 .register_form span:nth-child(1) {
   font-weight: 100;
@@ -98,11 +116,15 @@
 }
 .register_form span:nth-child(2) {
   font-weight: 100;
-  font-size: 20px;
+  font-size: 16px;
   color: rgb(109, 115, 120);
 }
 .auths_link {
   color: rgb(8, 112, 209);
+  padding-left: 5px;
+}
+.auths_link:hover{
+  text-decoration: underline;
 }
 .error {
   padding: 0px;
@@ -115,4 +137,10 @@
 .error_input {
   border-color: #f00 !important;
   outline: none;
+}
+
+.check_register_input{
+  height: 20px !important;
+  width: 20px !important;
+  border: 2px solid rgb(215, 216, 219);
 }
