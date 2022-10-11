@@ -72,6 +72,7 @@
   align-items: center;
   justify-content: space-evenly;
   font-size: 16px;
+  margin-right: 50px;
 }
 .login_right {
   width: 55%;
@@ -147,6 +148,7 @@
   align-items: center;
   width: 100%;
   cursor: pointer;
+  margin-right: 50px;
 }
 .profile_nav_profile_auth img {
   width: 30px;
