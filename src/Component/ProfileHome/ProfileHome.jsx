@@ -1,26 +1,18 @@
-import React from 'react'
-import './style.css'
+import React from "react";
+import "./style.css";
+import { Link } from "react-router-dom";
 function ProfileHome() {
   return (
-    <div className='home_profile_conatiner'>
-        <div className='home_content'>
-          <h4>Home Feed</h4>
-          <span>See photos and published Galleries from people you follow.</span>
-          <div className='nav_profile_home'>
-            <span>Home</span>
-          </div>
-          </div>
-          <div className='content_gray'>
-            <div className='inner_content'>
-              <span>Welcome to 500px</span>
-              <span>Follow photographers to get started</span>
-            </div>
-
-
-          </div>
-       
-    </div>
-  )
+    <>
+      <div className="home_profile_conatiner">
+        <h2>Feed Home</h2>
+        <span>See photos and published Galleries from people you follow.</span>
+        <div className="home_Profile_link">
+          <Link>Home</Link>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default ProfileHome
+export default ProfileHome;
