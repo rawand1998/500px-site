@@ -32,3 +32,30 @@
   color: #0870d1;
   box-shadow: inset 0 -3px 0 0 #0870d1;
 }
+.welcome_home{
+  width: calc(100% - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  word-break: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgb(34, 34, 34);
+  border-bottom: 1px solid rgb(215, 216, 219);
+  padding: 0px 0px 16px;
+  margin: 16px auto 0px;
+
+}
+.welcome_home span:nth-child(1){
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--black-color);
+  font-weight: bold;
+}
+.welcome_home span:nth-child(2){
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--black-color);
+}
