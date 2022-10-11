@@ -67,7 +67,7 @@
 .features {
   padding-left: 55px;
 }
- .feature_label {
+.feature_label {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -101,11 +101,59 @@
 .view_banner span:hover {
   color: #0870d1;
 }
-.explore_section{
+.explore_section {
   padding-left: 52px;
   padding-right: 52px;
 }
-.feature_banner_text{
+.feature_banner_text {
   display: flex;
   flex-direction: column;
+}
+.home_profile_card {
+  width: 868px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  justify-content: flex-start;
+  height: 1100px;
+}
+.block1 {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  box-shadow: rgb(0 0 0 / 8%) 0px 0px 4px, rgb(0 0 0 / 16%) 0px 4px 12px;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+  width: 421px;
+  height: 212px;
+  margin: 1px 5px;
+  margin-bottom: 40%;
+}
+.inner_block {
+  display: flex;
+  padding: 15px;
+}
+.inner_block_img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background: url("https://500px.com/staticV2/media/icon-editor-choice.17f73303.svg")
+    center center no-repeat rgb(7, 211, 212);
+}
+.imges_cards {
+  max-width: 100%;
+  height: 211px;
+  width: 426px;
+}
+.img1_block {
+  height: 211px;
+  display: grid;
+  column-gap: 4px;
+  grid-template-columns: 1.49925fr 0.665333fr;
+  margin-bottom: 4px;
+}
+.img1_block img {
+  width: 100%;
+  height: 211px;
+  object-fit: cover;
 }
