@@ -95,6 +95,7 @@ function ProfileHome() {
             })}
           </div>
         </div>
+        <div className="line"></div>
         <div className="explore_section">
           <div className="feature_banner_text">
             <span className="feature_label">Explore the community</span>

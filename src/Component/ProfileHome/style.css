@@ -104,6 +104,7 @@
 .explore_section {
   padding-left: 52px;
   padding-right: 52px;
+  padding-top: 15px;
 }
 .feature_banner_text {
   display: flex;
@@ -167,21 +168,22 @@
   max-width: 100%;
   position: relative;
   height: 300px;
-  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;
   margin-left: 45px;
+  border-bottom: 1px solid rgb(215, 216, 219);
+  width: calc(100% - 64px);
 }
 .slider {
   background-color: #fff;
   height: 190px;
-  width: 425px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   background: rgb(255, 255, 255);
   border: 1px solid rgb(238, 239, 242);
-  padding: 16px;
+  padding: 16px 0px;
   margin-left: 15px;
 }
 .slider_images {
