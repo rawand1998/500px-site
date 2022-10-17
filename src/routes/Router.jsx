@@ -1,5 +1,4 @@
 import React, { lazy } from "react";
-import { createBrowserRouter } from "react-router-dom";
 const Register = lazy(() => import("../Component/auth/Register"));
 const Login = lazy(() => import("../Component/auth/Login"));
 const Popular = lazy(() => import("../Component/Popular/Popular"));
