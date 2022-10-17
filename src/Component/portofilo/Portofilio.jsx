@@ -55,7 +55,7 @@ function Portofilio() {
       </div>
       <div>
         <div className="profile_menu">
-          <div className="right_list_popular">
+          <div className="right_list_profilio">
             <ul>
               <li className="active" onClick={() => setTab("Photos")}>
                 Photos
