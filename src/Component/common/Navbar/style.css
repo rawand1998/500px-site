@@ -1,3 +1,4 @@
+
 .navbar_conatiner {
   display: flex;
   padding-left: 32px;
@@ -9,8 +10,8 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: #fff;
   width: 100%;
+  background-color: #fff;
 }
 
 .bowl_menu {
@@ -56,9 +57,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+ color: var(--black-color);
 }
-.register {
+/* .right_navbar .auth{
+  color: var(--black-color);
+}
+.right_navbar  .register{
   border: 2px solid var(--black-color);
+} */
+.profile_linkss  li a {
+  /* color: var(--black-color); */
+
+}
+
+.register {
+  border: 2px solid #fff;
   border-radius: 100px;
   padding: 0px 16px;
   height: 32px;
@@ -107,6 +120,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: #fff;
+}
+.logo title {
+  color: #fff;
 }
 .logo svg:hover {
   color: rgb(41, 134, 247);

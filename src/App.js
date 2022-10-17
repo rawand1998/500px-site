@@ -8,9 +8,9 @@ import Register from "./Component/auth/Register";
 import Popular from "./Component/Popular/Popular";
 import Portofilio from "./Component/portofilo/Portofilio";
 import RegisterWithEmail from "./Component/auth/RegisterWithEmail";
-import { onAuthStateChanged, getAuth } from "firebase/auth";
 import EditProfile from "./Component/editProfile/EditProfile";
-// import {auth} from './firebase/firebase'
+
+import  ProfileHome from './Component/ProfileHome/ProfileHome'
 function App() {
 
   return (
@@ -24,6 +24,7 @@ function App() {
         <Route path="profile/:id" element={<Portofilio />} />
         <Route path="registerform" element={<RegisterWithEmail />} />
         <Route path="edit" element={<EditProfile />} />
+        <Route path="home" element={<ProfileHome />} />
       </Routes>
     </BrowserRouter>
   );
