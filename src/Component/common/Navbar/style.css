@@ -1,4 +1,3 @@
-
 .navbar_conatiner {
   display: flex;
   padding-left: 32px;
@@ -57,21 +56,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
- color: var(--black-color);
-}
-/* .right_navbar .auth{
   color: var(--black-color);
-}
-.right_navbar  .register{
-  border: 2px solid var(--black-color);
-} */
-.profile_linkss  li a {
-  /* color: var(--black-color); */
-
 }
 
 .register {
-  border: 2px solid #fff;
+  border: 2px solid var(--black-color);
   border-radius: 100px;
   padding: 0px 16px;
   height: 32px;
