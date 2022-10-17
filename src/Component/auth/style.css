@@ -11,6 +11,7 @@
 }
 .authenticon {
   background-color: rgb(247, 248, 250);
+
 }
 .form {
   padding: 24px;
@@ -22,7 +23,7 @@
   display: flex;
   flex-direction: column;
   width: 370px;
-  margin-top: 25px;
+  margin-top: 8%;
 }
 .form label {
   font-size: 14px;

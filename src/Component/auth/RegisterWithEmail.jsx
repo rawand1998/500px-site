@@ -35,7 +35,7 @@ function RegisterWithEmail() {
             console.log("err: ", err);
             setErrMsg("Email already exists !");
           });
-        // navigate("/login");
+        navigate("/login");
       }
       // if (email === "" && password === "") {
       //   setErrMsg("password and email is requird");
