@@ -95,3 +95,6 @@
   cursor: pointer;
   
 }
+.right_list_profilio ul li:hover{
+  color: rgb(8, 112, 209);
+}
