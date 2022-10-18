@@ -1,14 +1,14 @@
 import React, { lazy } from "react";
-const Register = lazy(() => import("../Component/auth/Register"));
-const Login = lazy(() => import("../Component/auth/Login"));
+const Register = lazy(() => import("../pages/auth/Register"));
+const Login = lazy(() => import("../pages/auth/Login"));
 const Popular = lazy(() => import("../Component/Popular/Popular"));
-const Portofilio = lazy(() => import("../Component/portofilo/Portofilio"));
+const Portofilio = lazy(() => import("../pages/portofilio/Portofilio"));
 const RegisterWithEmail = lazy(() =>
-  import("../Component/auth/RegisterWithEmail")
+  import("../pages/auth/RegisterWithEmail")
 );
-const EditProfile = lazy(() => import("../Component/editProfile/EditProfile"));
+const EditProfile = lazy(() => import("../pages/editProfile/EditProfile"));
 const ProfileHome = lazy(() => import("../Component/ProfileHome/ProfileHome"));
-const Home = lazy(() => import("../Component/Home/Home"));
+const Home = lazy(() => import("../pages/Home/Home"));
 const Router = {
   routes: [
     { path: "/", element: <Home /> },

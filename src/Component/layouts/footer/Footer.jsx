@@ -1,6 +1,6 @@
 import React from "react";
-import googlePaly from "../../images/google play.jpg";
-import appStore from "../../images/app store.png";
+import googlePaly from "../../../images/google play.jpg";
+import appStore from "../../../images/app store.png";
 import "./style.css";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";

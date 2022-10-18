@@ -86,53 +86,7 @@ function NavBar() {
                   <li>
                     <Link to="" onClick={showmenu}>
                       Licensing
-                      <svg
-                        height="16"
-                        width="16"
-                        viewBox="0 0 21 20"
-                        fill="#6d7378"
-                      >
-                        <path d="M4.57926 7.03499C4.57933 6.73524 4.75993 6.46502 5.03687 6.35032C5.31381 6.23562 5.63258 6.299 5.84457 6.51093L11.2505 11.9168L16.6564 6.51093C16.9472 6.23002 17.4096 6.23404 17.6955 6.51996C17.9814 6.80589 17.9854 7.26821 17.7045 7.55906L11.7745 13.489C11.4851 13.7784 11.0159 13.7784 10.7264 13.489L4.79645 7.55906C4.65743 7.42008 4.57931 7.23157 4.57926 7.03499Z"></path>
-                      </svg>
-                    </Link>
-                    {menu ? (
-                      <div className="img_menu menus_add">
-                        <ul>
-                          <Link to={`/profile/${idUser}`} onClick={showmenu}>
-                            Profile
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Portfolio
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Rresources
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Stats
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Galleries
-                          </Link>
-                          <br />
-                          <Link to="" onClick={showmenu}>
-                            Liked photos
-                          </Link>
-                          <Link to="" onClick={showmenu}></Link>
-                          <Link to="" onClick={showmenu}>
-                            Photo managers
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Photo managers
-                          </Link>
-
-                          <Link to="" onClick={showmenu}>
-                            Photo managers
-                          </Link>
-                        </ul>
-                      </div>
-                    ) : (
-                      ""
-                    )}
+                </Link>
                   </li>
 
                   <li>
@@ -156,7 +110,7 @@ function NavBar() {
                         width="24px"
                         height="24"
                         viewBox="0 0 24 24"
-                        fill="#fff"
+                        fill="#000"
                       >
                         <path d="M6,14 C4.8954305,14 4,13.1045695 4,12 C4,10.8954305 4.8954305,10 6,10 C7.1045695,10 8,10.8954305 8,12 C8,13.1045695 7.1045695,14 6,14 Z M12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 Z M18,14 C16.8954305,14 16,13.1045695 16,12 C16,10.8954305 16.8954305,10 18,10 C19.1045695,10 20,10.8954305 20,12 C20,13.1045695 19.1045695,14 18,14 Z"></path>
                       </svg>
@@ -226,53 +180,9 @@ function NavBar() {
                   <li>
                     <Link to="">
                       Licensing
-                      <svg
-                        height="16"
-                        width="16"
-                        viewBox="0 0 21 20"
-                        fill="#6d7378"
-                      >
-                        <path d="M4.57926 7.03499C4.57933 6.73524 4.75993 6.46502 5.03687 6.35032C5.31381 6.23562 5.63258 6.299 5.84457 6.51093L11.2505 11.9168L16.6564 6.51093C16.9472 6.23002 17.4096 6.23404 17.6955 6.51996C17.9814 6.80589 17.9854 7.26821 17.7045 7.55906L11.7745 13.489C11.4851 13.7784 11.0159 13.7784 10.7264 13.489L4.79645 7.55906C4.65743 7.42008 4.57931 7.23157 4.57926 7.03499Z"></path>
-                      </svg>
+                   
                     </Link>
-                    {menu ? (
-                      <div className="img_menu menus_add">
-                        <ul>
-                          <Link to={`/profile/${idUser}`} onClick={showmenu}>
-                            Profile
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Portfolio
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Rresources
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Stats
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Galleries
-                          </Link>
-                          <br />
-                          <Link to="" onClick={showmenu}>
-                            Liked photos
-                          </Link>
-                          <Link to="" onClick={showmenu}></Link>
-                          <Link to="" onClick={showmenu}>
-                            Photo managers
-                          </Link>
-                          <Link to="" onClick={showmenu}>
-                            Photo managers
-                          </Link>
-
-                          <Link to="" onClick={showmenu}>
-                            Photo managers
-                          </Link>
-                        </ul>
-                      </div>
-                    ) : (
-                      ""
-                    )}
+          
                   </li>
                   <li>
                     <Link to="/about">
@@ -315,10 +225,10 @@ function NavBar() {
             ) : (
               <div className="auth_btn">
                 <Link className="auth login" to="/login">
-                  Log in
+                  Log In
                 </Link>
                 <Link className="auth register" to="/register">
-                  Sign up
+                  Sign Up
                 </Link>
               </div>
             )}
