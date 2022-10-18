@@ -1,17 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
 import user from "../../images/user.png";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.css";
 import { CardPhoto, CardGalleries } from "./ProfileCard";
 import { AuthContext } from "../../context/auth";
 import { FaArrowLeft } from "react-icons/fa";
 function Portofilio() {
   const [tab, setTab] = useState("Photos");
-  const { getName, userName } = useContext(AuthContext);
+  const { userName } = useContext(AuthContext);
   console.log(userName);
-  const { id } = useParams();
   useEffect(() => {
-    getName(id);
   }, []);
 
   return (

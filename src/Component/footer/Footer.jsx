@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -67,13 +67,12 @@ function Footer() {
         <div className="scoicl_footer">
           <span className="span">Company</span>
           <div className="social_btns">
-          <a>
-              <img src={appStore} alt="" />
+            <a href="/">
+              <img src={appStore} alt="not found" />
             </a>
-            <a>
-              <img src={googlePaly} alt="" />
+            <a href="/">
+              <img src={googlePaly} alt="not found" />
             </a>
-          
           </div>
         </div>
       </div>

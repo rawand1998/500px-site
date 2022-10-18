@@ -2,13 +2,10 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaMixer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
-import { onAuthStateChanged } from "firebase/auth";
 import ProfileNav from "./ProfileNav";
 import { AiOutlineMenu } from "react-icons/ai";
 import googlePaly from "../../../images/google play.jpg";
 import appStore from "../../../images/app store.png";
-import firebase from "firebase/compat/app";
 import { AuthContext } from "../../../context/auth";
 function NavBar() {
   const navigate = useNavigate();
@@ -425,10 +422,10 @@ function NavBar() {
           )}
           <div className="width_footer">
             <div className="social_btns">
-              <a>
+              <a href="/">
                 <img src={googlePaly} alt="" />
               </a>
-              <a>
+              <a href="/">
                 <img src={appStore} alt="" />
               </a>
             </div>
@@ -437,9 +434,9 @@ function NavBar() {
                 <h4>© 500px</h4>
               </div>
               <div className="footer_menu_terms">
-                <a href="">Terms</a>
-                <a href="">Privacy</a>
-                <a href="">Support</a>
+                <a href="/">Terms</a>
+                <a href="/">Privacy</a>
+                <a href="/">Support</a>
               </div>
             </div>
           </div>

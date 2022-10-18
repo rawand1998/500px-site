@@ -1,9 +1,6 @@
 import React from "react";
 import "./style.css";
-import queen from "../../images/queen.PNG";
-import number from "../../images/number.PNG";
-import pin from "../../images/pin.PNG";
-import tree from "../../images/tree.PNG";
+
 function About() {
   const aboutContent = [
     {
