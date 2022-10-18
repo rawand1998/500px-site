@@ -21,7 +21,7 @@ function ProfileNav() {
           {menu ? (
             <div className="img_menu">
               <ul>
-                <Link to={`/profile`} onClick={showmenu}>
+                <Link to="/profile" onClick={showmenu}>
                   Profile
                 </Link>
                 <Link to="" onClick={showmenu}>
