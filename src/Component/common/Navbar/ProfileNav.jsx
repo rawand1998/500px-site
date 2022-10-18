@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import userprofile from "../../../images/userprofile.png";
 import { Link } from "react-router-dom";
 import "./style.css";
-import { auth } from "../../../firebase/firebase";
 import { AuthContext } from "../../../context/auth";
 function ProfileNav() {
   const [menu, setMenu] = useState(false);

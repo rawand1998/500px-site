@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { FaCamera } from "react-icons/fa";
 import user from "../../images/user.png";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { CardEdit } from "../portofilo/ProfileCard";
 import Edit from "./Edit";
-import { UploadImg } from "./IconMenu";
 
 function EditProfile() {
   const table = [

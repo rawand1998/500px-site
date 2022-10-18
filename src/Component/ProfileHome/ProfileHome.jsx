@@ -1,16 +1,8 @@
 import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import Slider from "react-slick";
 function ProfileHome() {
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 3,
-    arrows: false,
-  };
+
   const slider = [
     {
       img1: "https://drscdn.500px.org/photo/1045854362/q%3D80_m%3D1500/v2?sig=faa9eb8287994c8bd1448088c19b4fe097158b528c5fdd2f194896f6676e122b",

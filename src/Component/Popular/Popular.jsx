@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import axios from "axios";
-const apiKey = process.env.API_KEY;
-// console.log(apiKey,"knhbyujgvcudc");
 function Popular() {
-  const [image, setImage] = useState("");
-  const clientId = "t_YxM0Taxyt2MhS4ve9lviN-EApwUOrVRjNIbJYD10w";
-  const url =
-    "https://api.unsplash.com/search/photos?page=1&query=" +
-    image +
-    "&client_id=" +
-    clientId;
+
   const [result, setResult] = useState([]);
   useEffect(() => {
     axios
@@ -22,7 +14,6 @@ function Popular() {
       });
   }, []);
 
-  console.log(result);
 
   return (
     <div className="popluar_nav">
@@ -56,7 +47,7 @@ function Popular() {
           {result.map((image) => {
             return (
               <div className="image_section_conatiner_single_pop">
-                <img src={image.urls.small_s3} />
+                <img src={image.urls.small_s3} alt="not found" />
                 <span className="title_img">{image.user.name}</span>
               </div>
             );

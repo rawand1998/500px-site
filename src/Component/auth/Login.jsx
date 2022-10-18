@@ -3,16 +3,14 @@ import ButtonAuth from "../common/Button/ButtonAuth";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../firebase/firebase";
-import Error from "../common/error/Error";
 import {AuthContext} from '../../context/auth'
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [errMsg, setErrMsg] = useState("");
-  const [successs, setSucess] = useState("");
-  const {LoginAuth, authWithGoogle,error} = useContext(AuthContext)
+  const [successs] = useState("");
+  const {LoginAuth, authWithGoogle} = useContext(AuthContext)
   const login = async (e) => {
     e.preventDefault();
     const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;

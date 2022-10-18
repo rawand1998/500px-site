@@ -13,10 +13,10 @@ function Advertisement() {
           photographers. Download the 500px app for Android and iOS today!
         </span>
         <div className="social_btns">
-        <a>
+        <a href="/">
            <img src={appStore} alt="" />
           </a>
-          <a>
+          <a href="/">
            <img src={googlePaly} alt="" />
           </a>
       

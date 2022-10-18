@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import ButtonAuth from "../common/Button/ButtonAuth";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { AuthContext } from "../../context/auth";
 
 function Register() {
   const navigate = useNavigate();
-  const { authWithGoogle, error } = useContext(AuthContext);
+  const { authWithGoogle } = useContext(AuthContext);
   const authRegister = () => {
     navigate("/registerform");
   };
@@ -84,7 +84,7 @@ function Register() {
           <div className="sign_up_para_register">
             <div className="checkbox">
               <input type="checkbox" className="check_register_input" />
-              <span> I agree to the<a>Terms of Service</a> and <a>Privacy Policy.</a></span>
+              <span> I agree to the<a href="/">Terms of Service</a> and <a href="/">Privacy Policy.</a></span>
             </div>
             <span>
               Already have an account? ?

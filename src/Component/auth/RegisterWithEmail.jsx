@@ -9,7 +9,6 @@ function RegisterWithEmail() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
   const [errMsg, setErrMsg] = useState("");
 
   const authRegister = async (e) => {
