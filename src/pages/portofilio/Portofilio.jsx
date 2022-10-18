@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import user from "../../images/user.png";
 import { Link } from "react-router-dom";
 import "./style.css";
-import { CardPhoto, CardGalleries } from "./ProfileCard";
+import { CardPhoto, CardGalleries } from "../../Component/portofilo/ProfileCard";
 import { AuthContext } from "../../context/auth";
 import { FaArrowLeft } from "react-icons/fa";
 function Portofilio() {

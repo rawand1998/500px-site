@@ -7,13 +7,12 @@ import { Suspense } from "react";
 function App() {
   return (
     <Suspense fallback={<p>loading...</p>}>
-      <NavBar/>
+      <NavBar />
       <Routes>
         {Router.routes.map((route, Index) => (
           <Route path={route.path} element={route.element} key={Index} />
         ))}
       </Routes>
-   
     </Suspense>
   );
 }

@@ -3,8 +3,8 @@ import user from "../../images/user.png";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { AiOutlineMenu } from "react-icons/ai";
-import { CardEdit } from "../portofilo/ProfileCard";
-import Edit from "./Edit";
+import { CardEdit } from "../../Component/portofilo/ProfileCard";
+import Edit from "../../Component/editProfile/Edit";
 
 function EditProfile() {
   const table = [

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import ButtonAuth from "../common/Button/ButtonAuth";
+import ButtonAuth from "../../Component/common/Button/ButtonAuth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
-import "./style.css";
-
+import './style.css'
 function RegisterWithEmail() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

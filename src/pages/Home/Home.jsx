@@ -1,16 +1,16 @@
 import React from "react";
-import Header from "../header/Header";
-import About from "../about/About";
-import Advertisement from "../advertisement/Advertisement";
-import CommonSection from "../common/CommonSection/CommonSection";
-import Image from "../imagsSection/Image";
-import ImageCommon from "../common/imageCommonSection/ImageCommon";
+import Header from "../../Component/layouts/header/Header";
+import About from "../../Component/about/About";
+import Advertisement from "../../Component/advertisement/Advertisement";
+import CommonSection from "../../Component/common/CommonSection/CommonSection";
+import Image from "../../Component/imagsSection/Image";
+import ImageCommon from "../../Component/common/imageCommonSection/ImageCommon";
 import homeImg from "../../images/home.png";
-import QuestCommon from "../common/QuestsCommon/QuestCommon";
-import Joinus from "../joinUs/Joinus";
+import QuestCommon from "../../Component/common/QuestsCommon/QuestCommon";
+import Joinus from "../../Component/joinUs/Joinus";
 import "./style.css";
-import Footer from "../footer/Footer";
-import Table from "../TableSection/Table";
+import Footer from "../../Component/layouts/footer/Footer";
+import Table from "../../Component/TableSection/Table";
 function Home() {
   return (
     <div className="home_container">

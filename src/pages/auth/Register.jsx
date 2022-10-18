@@ -1,10 +1,10 @@
 import React, { useContext} from "react";
-import ButtonAuth from "../common/Button/ButtonAuth";
+import ButtonAuth from "../../Component/common/Button/ButtonAuth";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "./style.css";
-import { AuthContext } from "../../context/auth";
 
+import { AuthContext } from "../../context/auth";
+import './style.css'
 function Register() {
   const navigate = useNavigate();
   const { authWithGoogle } = useContext(AuthContext);

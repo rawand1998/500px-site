@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import ButtonAuth from "../common/Button/ButtonAuth";
+import ButtonAuth from "../../Component/common/Button/ButtonAuth";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
