@@ -15,7 +15,7 @@ const Router = {
     { path: "login", element: <Login /> },
     { path: "register", element: <Register /> },
     { path: "popular", element: <Popular /> },
-    { path: "profile", element: <Portofilio />, params: { id: "id" } },
+    { path: "profile", element: <Portofilio /> },
     { path: "registerform", element: <RegisterWithEmail /> },
     { path: "edit", element: <EditProfile /> },
     { path: "home", element: <ProfileHome /> },
