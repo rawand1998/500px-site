@@ -40,9 +40,9 @@ function Login() {
     <div className="authenticon">
       <div className="auth_conatiner">
         <form action="" className="form">
-          <span>Login to 500px</span>
+          <span>Login To 500px</span>
           <div className="input">
-            <label htmlFor="">Email or Username*</label>
+            <label htmlFor="">Email Or Username*</label>
             <input
               type="text"
               value={email}
@@ -55,7 +55,7 @@ function Login() {
           <div className="input">
             <div className="labels">
               <label>Password*</label>
-              <label className="forget_pass">Forgot password?</label>
+              <label className="forget_pass">Forgot Password?</label>
             </div>
             <input
               value={password}
@@ -68,7 +68,7 @@ function Login() {
           <span className="error">{errMsg}</span>
 
           <ButtonAuth
-            title="Login"
+            title="LOGIN"
             bgcolor="rgb(8, 112, 209)"
             borderColor="rgb(8, 112, 209)"
             color="rgb(255, 255, 255)"
@@ -77,7 +77,7 @@ function Login() {
 
           <div className="btns_auth">
             <ButtonAuth
-              title="Login with apple"
+              title="Login With Apple"
               bgcolor="rgb(34, 34, 34)"
               borderColor="rgb(34, 34, 34)"
               color="rgb(255, 255, 255)"
@@ -85,14 +85,14 @@ function Login() {
               d2="M13.2981 3.84713C14.1199 2.8186 14.6826 1.41988 14.5264 0C13.3363 0.0527766 11.8479 0.822691 10.9912 1.82911C10.2333 2.71521 9.55574 4.16821 9.73072 5.53381C11.0674 5.63306 12.44 4.85948 13.2981 3.84713Z"
             />
             <ButtonAuth
-              title="Login with facebook"
+              title="Login With Facebook"
               bgcolor="rgb(60, 90, 150)"
               borderColor="rgb(60, 90, 150)"
               color="rgb(255, 255, 255)"
               d="M24 12.0733C24 5.40541 18.6274 3.46502e-06 12 3.46502e-06C5.37258 3.46502e-06 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95196 17.3438 4.95196V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"
             />
             <ButtonAuth
-              title="Login with Google"
+              title="Login With Google"
               bgcolor="#fff"
               borderColor="1px solid  rgb(109, 115, 120)"
               color="rgb(109, 115, 120)"
@@ -112,7 +112,7 @@ function Login() {
             <span>
               Don`t have a account ?
               <Link className="auths_link" to="/register">
-                Sign up
+                Sign Up
               </Link>
             </span>
           </div>

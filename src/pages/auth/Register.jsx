@@ -39,7 +39,7 @@ function Register() {
           <div className="btns_auth">
           <ButtonAuth
               handleClick={authRegisterApple}
-              title="Login with apple"
+              title="Login With Apple"
               bgcolor="rgb(34, 34, 34)"
               borderColor="rgb(34, 34, 34)"
               color="rgb(255, 255, 255)"
@@ -48,7 +48,7 @@ function Register() {
             />
                <ButtonAuth
               handleClick={authRegisterFacebook}
-              title="Login with facebook"
+              title="Login With Facebook"
               bgcolor="rgb(60, 90, 150)"
               borderColor="rgb(60, 90, 150)"
               color="rgb(255, 255, 255)"
@@ -57,7 +57,7 @@ function Register() {
         
         
         <ButtonAuth
-              title="Login with Google"
+              title="Login With Google"
               bgcolor="#fff"
               borderColor="1px solid  rgb(109, 115, 120)"
               color="rgb(109, 115, 120)"
@@ -72,7 +72,7 @@ function Register() {
              fill4="rgb(234, 67, 53)"
           />   
            <ButtonAuth
-          title="Continue with gmail"
+          title="Continue With Gmail"
           bgcolor="rgb(8, 112, 209)"
           borderColor="rgb(8, 112, 209)"
           color="rgb(255, 255, 255)"

@@ -17,7 +17,7 @@ function Header() {
             world. We're not guided by fads—just great photography.
           </span>
           <Link className="button btn" to="/register">
-            Sign up
+            Sign Up
           </Link>
         </div>
       </div>
